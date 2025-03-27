@@ -1,0 +1,199 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Supera-300';
+    src: url('../public/fonts/SuperaGothic-Light.otf') format('opentype');
+    font-weight: 300;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Supera-400';
+    src: url('../public/fonts/SuperaGothic-Book.otf') format('opentype');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Supera-500';
+    src: url('../public/fonts/SuperaGothic-Regular.otf') format('opentype');
+    font-weight: 500;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Supera-600';
+    src: url('../public/fonts/SuperaGothic-Bold.otf') format('opentype');
+    font-weight: 600;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Supera-700';
+    src: url('../public/fonts/SuperaGothic-ExtraBold.otf') format('opentype');
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Supera-800';
+    src: url('../public/fonts/SuperaGothic-Black.otf') format('opentype');
+    font-weight: 800;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Supera-900';
+    src: url('../public/fonts/SuperaGothic-UltraBlack.otf') format('opentype');
+    font-weight: 900;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'bebas_Neue';
+    src: url('../public/fonts/BebasNeue-Regular.ttf') format('opentype');
+    font-weight: 900;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'poppins';
+    src: url('../public/fonts/Poppins-Light.ttf') format('opentype');
+    font-weight: 300;
+    font-display: swap;
+  }
+
+  :root {
+    --font-supera-300: 'Supera-300', sans-serif;
+    --font-supera-400: 'Supera-400', sans-serif;
+    --font-supera-500: 'Supera-500', sans-serif;
+    --font-supera-600: 'Supera-600', sans-serif;
+    --font-supera-700: 'Supera-700', sans-serif;
+    --font-supera-800: 'Supera-800', sans-serif;
+    --font-supera-900: 'Supera-900', sans-serif;
+    --font-bebas_Neue: 'bebas_Neue', sans-serif;
+    --font-poppins: 'poppins', sans-serif;
+  }
+}
+
+/* Custom utility classes for the fonts */
+.font-supera300 {
+  font-family: var(--font-supera-300);
+}
+.font-supera400 {
+  font-family: var(--font-supera-400);
+}
+.font-supera500 {
+  font-family: var(--font-supera-500);
+}
+.font-supera600 {
+  font-family: var(--font-supera-600);
+}
+.font-supera700 {
+  font-family: var(--font-supera-700);
+}
+.font-supera800 {
+  font-family: var(--font-supera-800);
+}
+.font-supera900 {
+  font-family: var(--font-supera-900);
+}
+.font-bebas_Neue {
+  font-family: var(--font-bebas_Neue);
+}
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+/* Header transition styles */
+header {
+  transition: all 0.3s ease-in-out;
+}
+
+.header-scrolled {
+  background-color: #000;
+  padding-top: 0.75rem !important; /* py-3 */
+  padding-bottom: 0.75rem !important;
+}
+
+/* Navigation link hover effect */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@layer components {
+  .menu-open {
+    @apply opacity-100 visible max-h-[500px] translate-y-0 transition-all duration-300 ease-in-out;
+  }
+
+  .menu-container {
+    @apply opacity-0 invisible max-h-0 -translate-y-2 transition-all duration-300 ease-in-out overflow-hidden;
+  }
+
+  .menu-background {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+}
+
+
+@layer utilities {
+  .bg-mock-big {
+    background-image: url('../public/mock_big.webp');
+  }
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.faq-answer.active {
+  max-height: 200px;
+  opacity: 1;
+}
+
+/* Updated plus/minus icon styles */
+.plus-minus-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.plus-minus-icon::before,
+.plus-minus-icon::after {
+  content: '';
+  position: absolute;
+  background-color: #4B5563;
+  transition: transform 0.3s ease;
+}
+
+.plus-minus-icon::before {
+  width: 2px;
+  height: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.plus-minus-icon::after {
+  width: 16px;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.plus-minus-icon.active::before {
+  transform: translateX(-50%) rotate(90deg);
+}
