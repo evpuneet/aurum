@@ -4883,7 +4883,7 @@
              <div id="radialMenu" class="opacity-0 z-40 duration-4 transition-all backdrop-blur-sm bottom-[-14%] left-0 overlay-animation fixed overflow-hidden h-screen w-screen bg-[#000000aa] pointer-events-none">
               <div class="w-full h-full flex justify-center items-end py-9">
                   <div class="w-[200px] h-[200px] opacity-100 duration-500 relative rotate-[24deg] flex justify-between items-center rounded-full">
-                      <a class="rotate-[-24deg] absolute top-[-10%] left-[-12%] w-[68px] h-[68px] bg-[#fff] rounded-full flex justify-center items-center" href="/price">
+                      <a class="rotate-[-24deg] absolute top-[-10%] left-[-12%] w-[68px] h-[68px] bg-[#fff] rounded-full flex justify-center items-center transition-all opacity-0" style="transform: scale(0.5) translateY(100px);" href="/price">
                           <div class="w-full h-full rounded-full relative flex justify-center items-center">
                               <svg width="19" height="28" viewBox="0 0 19 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path
@@ -4894,7 +4894,7 @@
                               <h6 class="uppercase text-[12px] font-supera500 text-[#fff] text-center tracking-[1px] absolute top-[110%] left-[50%] translate-x-[-50%]">Price</h6>
                           </div>
                       </a>
-                      <a class="rotate-[-24deg] absolute top-[-27%] left-[30%] w-[68px] h-[68px] bg-[#fff] rounded-full flex justify-center items-center" href="/price#current-offer">
+                      <a class="rotate-[-24deg] absolute top-[-27%] left-[30%] w-[68px] h-[68px] bg-[#fff] rounded-full flex justify-center items-cente transition-all opacity-0r" style="transform: scale(0.5) translateY(100px);" href="/price#current-offer">
                           <div class="w-full h-full rounded-full relative flex justify-center items-center">
                               <svg class="mx-auto w-[35px]" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path
@@ -4908,7 +4908,7 @@
                               </h6>
                           </div>
                       </a>
-                      <a class="rotate-[-24deg] absolute top-[-6%] left-[82%] w-[68px] h-[68px] bg-[#fff] rounded-full flex justify-center items-center" href="/amenities">
+                      <a class="rotate-[-24deg] absolute top-[-6%] left-[82%] w-[68px] h-[68px] bg-[#fff] rounded-full flex justify-center items-cent transition-all opacity-0er" style="transform: scale(0.5) translateY(100px);" href="/amenities">
                           <div class="w-full h-full rounded-full relative flex justify-center items-center">
                               <svg class="mx-auto w-[35px]" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path
@@ -4929,7 +4929,7 @@
                               <h6 class="uppercase text-[12px] font-supera500 text-[#fff] text-center tracking-[1px] absolute top-[110%] left-[50%] translate-x-[-50%]">Amenities</h6>
                           </div>
                       </a>
-                      <a class="rotate-[-24deg] absolute top-[40%] left-[-29%] w-[68px] h-[68px] bg-[#fff] rounded-full flex justify-center items-center" href="/#products">
+                      <a class="rotate-[-24deg] absolute top-[40%] left-[-29%] w-[68px] h-[68px] bg-[#fff] rounded-full flex justify-center items-cente transition-all opacity-0r" style="transform: scale(0.5) translateY(100px);" href="/#products">
                           <div class="w-full h-full rounded-full relative flex justify-center items-center">
                               <svg class="mx-auto w-[35px]" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path
@@ -5332,6 +5332,8 @@
 <script src="./src/js/keyhighlight.js"></script>
 <script src="./src/js/counting.js"></script>
 <script src="./src/js/sidebar.js"></script>
+<script src="./src/js/needAssistant.js"></script>
+
 
 
 <script>
@@ -5353,24 +5355,6 @@
           answer.classList.toggle('active');
           icon.classList.toggle('active');
       });
-  });
-</script>
-
-<script>
-  // Add this JavaScript
-  const trigger = document.getElementById('menuTrigger');
-  const menu = document.getElementById('radialMenu');
-
-  trigger.addEventListener('click', () => {
-    menu.classList.toggle('!left-0');
-    menu.classList.toggle('!opacity-100');
-  });
-
-  // Optional: Close menu when clicking outside
-  menu.addEventListener('click', (e) => {
-    if(e.target === menu) {
-      menu.classList.remove('!left-0', '!opacity-100');
-    }
   });
 </script>
 

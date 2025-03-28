@@ -156,3 +156,24 @@ header {
   li.open > .header {
     margin-bottom: 1.25rem; /* equivalent to mb-5 in Tailwind */
   }
+
+  #menuTrigger {
+    transition: transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    will-change: transform;
+  }
+  #menuTrigger.active {
+    transform: rotate(135deg);
+  }
+  
+  #radialMenu {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    will-change: opacity;
+  }
+  #radialMenu.active {
+    opacity: 1;
+  }
+  
+  #radialMenu a {
+    will-change: transform, opacity;
+  }
