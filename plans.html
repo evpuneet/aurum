@@ -8,9 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>Aurum</title>
     <style>
-      html{
-        scroll-behavior: smooth;
-      }
       @keyframes ripple {
         0% {
           transform: scale(0);
@@ -27,10 +24,25 @@
         animation: ripple 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
       }
     
-      
-    </style>
+      /* Ensure center div remains static */
+      .static-center {
+        position: relative;
+        z-index: 10;
+      }
     
+      /* Optional: stagger the ripple delays */
+      .ripple:nth-child(1) {
+        animation-delay: .5s;
+      }
+      .ripple:nth-child(2) {
+        animation-delay: 1s;
+      }
+      .ripple:nth-child(3) {
+        animation-delay: 1.5s;
+      }
+    </style>
     <link rel="stylesheet" href="./src/style.css">
+    
 </head>
 <body>
     <!-- header -->
@@ -73,7 +85,7 @@
                     class="text-white tracking-wide text-[14px] xl:text-[17px] 3xl:text-lg uppercase relative table"
                   >
                     <a
-                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%] mega-menu-highlight"
+                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%]"
                       href="/#about-us"
                       >About Us</a
                     >
@@ -84,7 +96,7 @@
                     class="text-white tracking-wide text-[14px] xl:text-[17px] 3xl:text-lg uppercase relative table"
                   >
                     <a
-                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%] mega-menu-highlight"
+                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%]"
                       href="#products"
                       >Products</a
                     >
@@ -116,7 +128,7 @@
                     class="text-white tracking-wide text-[14px] xl:text-[17px] 3xl:text-lg uppercase relative table"
                   >
                     <a
-                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%] mega-menu-highlight"
+                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%]"
                       href="./plans.html"
                       >Plans</a
                     >
@@ -153,7 +165,7 @@
                     class="text-white tracking-wide text-[14px] xl:text-[17px] 3xl:text-lg uppercase relative table"
                   >
                     <a
-                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%] mega-menu-highlight"
+                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%]"
                       href="location.html"
                       >Location Map</a
                     >
@@ -185,7 +197,7 @@
                     class="text-white tracking-wide text-[14px] xl:text-[17px] 3xl:text-lg uppercase relative table"
                   >
                     <a
-                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%] mega-menu-highlight"
+                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%]"
                       href="./price.html"
                       >Price</a
                     >
@@ -220,7 +232,7 @@
                     class="text-white tracking-wide text-[14px] xl:text-[17px] 3xl:text-lg uppercase relative table"
                   >
                     <a
-                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%] mega-menu-highlight"
+                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%]"
                       href="./amenities.html"
                       >Amenities</a
                     >
@@ -231,7 +243,7 @@
                     class="text-white tracking-wide text-[14px] xl:text-[17px] 3xl:text-lg uppercase relative table"
                   >
                     <a
-                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%] mega-menu-highlight"
+                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%]"
                       href="./gallery.html"
                       >Gallery</a
                     >
@@ -272,7 +284,7 @@
                     class="text-white tracking-wide text-[14px] xl:text-[17px] 3xl:text-lg uppercase relative table"
                   >
                     <a
-                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%] mega-menu-highlight"
+                      class="w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 after:w-[0%]"
                       href="/#contact-us"
                       >Contact Us</a
                     >
@@ -365,7 +377,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="self-center" style="align-self: auto;">
+                <li class="self-center">
                   <button
                     aria-label="megamenu toggle button lg"
                     id="meagaMenuBtn_lg"
@@ -382,7 +394,6 @@
                       style="color: transparent"
                       src="./public/burgerBar.svg"
                     />
-                    <div class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" cursor="pointer"><path d="M0.981 16L0 15.019L7.019 8L0 0.981L0.981 0L8 7.019L15.019 0L16 0.981L8.981 8L16 15.019L15.019 16L8 8.981L0.981 16Z" fill="white"></path></svg></div>
                   </button>
                 </li>
               </ul>
@@ -443,147 +454,76 @@
                                   </div>
                               </li>
                               <li class="mb-3">
-                                <div class="pt-3 pb-3 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700 header">
-                                    <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/#products">Products</a>
-                                    <button class="text-white p-2 toggle-submenu">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300 " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="mb-4 pb-1 submenu-container" style="overflow: hidden; height: 0; opacity: 0; transition: height 0.3s ease, opacity 0.3s ease;">
-                                    <ul class="ml-8 space-y-2" style="height: auto; opacity: 1;">
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/#products">3 BHK</a></li>
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/#products">3 BHK+S</a></li>
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/#products">4 BHK+S</a></li>
-                                    </ul>
-                                </div>
-                              </li>                            
+                                  <div class="pb-1 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700">
+                                      <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/#products">Products</a>
+                                      <button class="text-white p-2">
+                                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                              <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </li>
                               <li class="mb-3">
-                                <div class="pt-3 pb-3 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700 header">
-                                    <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/plans">Plans</a>
-                                    <button class="text-white p-2 toggle-submenu">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300 " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
-                                    </button>
-                                </div>
-                                <div class="mb-4 pb-1 submenu-container" style="overflow: hidden; height: 0; opacity: 0; transition: height 0.3s ease, opacity 0.3s ease;">
-                                    <ul class="ml-8 space-y-2" style="height: auto; opacity: 1;">
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/plans#plan">Unit Plan</a></li>
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/plans#sitePlan">Site Plan</a></li>
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/plans#towerPlan">Tower Plan</a></li>
-                                    </ul>
-                                </div>
-                              </li>                            
+                                  <div class="pb-1 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700">
+                                      <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/plans">Plans</a>
+                                      <button class="text-white p-2">
+                                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                              <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </li>
                               <li class="mb-3">
-                                <div class="pt-3 pb-3 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700 header">
-                                    <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/location">Location Map</a>
-                                    <button class="text-white p-2 toggle-submenu">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300 " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
-                                    </button>
-                                </div>
-                                <div class="mb-4 pb-1 submenu-container" style="overflow: hidden; height: 0; opacity: 0; transition: height 0.3s ease, opacity 0.3s ease;">
-                                    <ul class="ml-8 space-y-2" style="height: auto; opacity: 1;">
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/location#nearby">Near By</a></li>
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/#map">Find Distance</a></li>
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/#key-highlights">Key Highlights</a></li>
-                                    </ul>
-                                </div>
-                              </li>                            
+                                  <div class="pb-1 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700">
+                                      <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/location">Location Map</a>
+                                      <button class="text-white p-2">
+                                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                              <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </li>
                               <li class="mb-3">
-                                <div class="pt-3 pb-3 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700 header">
-                                    <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/price">Price</a>
-                                    <button class="text-white p-2 toggle-submenu">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300 " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
-                                    </button>
-                                </div>
-                                <div class="mb-4 pb-1 submenu-container" style="overflow: hidden; height: 0; opacity: 0; transition: height 0.3s ease, opacity 0.3s ease;">
-                                    <ul class="ml-8 space-y-2" style="height: auto; opacity: 1;">
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/price#price">Price Sheet</a></li>
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/price#payment-structure">Payment Structure</a></li>
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/price#current-offer">Current Offers</a></li>
-                                    </ul>
-                                </div>
-                              </li>                            
+                                  <div class="pb-1 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700">
+                                      <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/price">Price</a>
+                                      <button class="text-white p-2">
+                                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                              <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </li>
                               <li class="mb-3">
                                   <div class="pb-1 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700">
                                       <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/amenities#amenities">Amenities</a>
                                   </div>
                               </li>
                               <li class="mb-3">
-                                <div class="pt-3 pb-3 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700 header">
-                                    <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/gallery">Gallery</a>
-                                    <button class="text-white p-2 toggle-submenu">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300 " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
-                                    </button>
-                                </div>
-                                <div class="mb-4 pb-1 submenu-container" style="overflow: hidden; height: 0; opacity: 0; transition: height 0.3s ease, opacity 0.3s ease;">
-                                    <ul class="ml-8 space-y-2" style="height: auto; opacity: 1;">
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/gallery#project-walk-through">Project Walk-Through</a></li>
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/gallery#sample-flat">Sample Flat</a></li>
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/gallery#project-gallery">Project Gallery</a></li>
-                                        <li style="opacity: 1; transform: none;"><a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="/gallery#construction-updates">Construction Updates</a></li>
-                                    </ul>
-                                </div>
-                              </li>                            
+                                  <div class="pb-1 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700">
+                                      <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/gallery">Gallery</a>
+                                      <button class="text-white p-2">
+                                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                              <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </li>
                               <li class="mb-3">
-                                <div class="pt-3 pb-3 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700 header">
-                                    <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/#contact-us">Contact Us</a>
-                                    <button class="text-white p-2 toggle-submenu">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300 " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
-                                    </button>
-                                </div>
-                                <div class="mb-4 pb-1 submenu-container" style="overflow: hidden; height: 0; opacity: 0; transition: height 0.3s ease, opacity 0.3s ease;">
-                                    <ul class="ml-8 space-y-2" style="height: auto; opacity: 1;">
-                                        <li style="opacity: 1; transform: none;">
-                                            <a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="">
-                                                <span class="flex items-center gap-x-1.5">
-                                                    <svg class="w-4" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M13.1303 6.39945C15.8039 6.39945 16.9443 7.53984 16.9443 10.2135H19.487C19.487 6.1134 17.2304 3.85676 13.1303 3.85676V6.39945ZM17.4808 13.3194C17.2365 13.0973 16.9155 12.9789 16.5856 12.9891C16.2556 12.9993 15.9425 13.1373 15.7124 13.374L12.6701 16.5028C11.9378 16.363 10.4656 15.904 8.95012 14.3924C7.43468 12.8757 6.97573 11.3996 6.83969 10.6724L9.96593 7.62884C10.2029 7.39889 10.3411 7.08575 10.3513 6.75569C10.3616 6.42563 10.2429 6.10455 10.0206 5.8604L5.32298 0.69493C5.10055 0.450014 4.7914 0.301454 4.4612 0.280802C4.131 0.260149 3.80575 0.369031 3.55454 0.584323L0.795723 2.95029C0.575922 3.17089 0.44473 3.46449 0.427033 3.7754C0.407963 4.09323 0.0443588 11.6221 5.88237 17.4627C10.9754 22.5544 17.355 22.9269 19.112 22.9269C19.3688 22.9269 19.5264 22.9193 19.5684 22.9167C19.8792 22.8993 20.1727 22.7676 20.3922 22.5468L22.7569 19.7867C22.9724 19.5356 23.0815 19.2105 23.061 18.8803C23.0406 18.5501 22.8923 18.2409 22.6476 18.0183L17.4808 13.3194Z"
-                                                            fill="white"
-                                                        ></path>
-                                                    </svg>
-                                                    +91 89680 66698
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li style="opacity: 1; transform: none;">
-                                            <a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="">
-                                                <span class="flex items-center gap-x-1.5">
-                                                    <svg class="w-4" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M13.1303 6.39945C15.8039 6.39945 16.9443 7.53984 16.9443 10.2135H19.487C19.487 6.1134 17.2304 3.85676 13.1303 3.85676V6.39945ZM17.4808 13.3194C17.2365 13.0973 16.9155 12.9789 16.5856 12.9891C16.2556 12.9993 15.9425 13.1373 15.7124 13.374L12.6701 16.5028C11.9378 16.363 10.4656 15.904 8.95012 14.3924C7.43468 12.8757 6.97573 11.3996 6.83969 10.6724L9.96593 7.62884C10.2029 7.39889 10.3411 7.08575 10.3513 6.75569C10.3616 6.42563 10.2429 6.10455 10.0206 5.8604L5.32298 0.69493C5.10055 0.450014 4.7914 0.301454 4.4612 0.280802C4.131 0.260149 3.80575 0.369031 3.55454 0.584323L0.795723 2.95029C0.575922 3.17089 0.44473 3.46449 0.427033 3.7754C0.407963 4.09323 0.0443588 11.6221 5.88237 17.4627C10.9754 22.5544 17.355 22.9269 19.112 22.9269C19.3688 22.9269 19.5264 22.9193 19.5684 22.9167C19.8792 22.8993 20.1727 22.7676 20.3922 22.5468L22.7569 19.7867C22.9724 19.5356 23.0815 19.2105 23.061 18.8803C23.0406 18.5501 22.8923 18.2409 22.6476 18.0183L17.4808 13.3194Z"
-                                                            fill="white"
-                                                        ></path>
-                                                    </svg>
-                                                    +91 99880 10405
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li style="opacity: 1; transform: none;">
-                                            <a class="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left" href="">
-                                                <span class="flex items-center gap-x-3.5 bg-white text-[#1ca04e] font-supera600 rounded-full py-2 px-6">
-                                                    <svg
-                                                        class="w-6"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        shape-rendering="geometricPrecision"
-                                                        text-rendering="geometricPrecision"
-                                                        image-rendering="optimizeQuality"
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        viewBox="0 0 509 511.514"
-                                                    >
-                                                        <path
-                                                            fill="#1ca04e"
-                                                            d="M434.762 74.334C387.553 26.81 323.245 0 256.236 0h-.768C115.795.001 2.121 113.696 2.121 253.456l.001.015a253.516 253.516 0 0033.942 126.671L0 511.514l134.373-35.269a253.416 253.416 0 00121.052 30.9h.003.053C395.472 507.145 509 393.616 509 253.626c0-67.225-26.742-131.727-74.252-179.237l.014-.055zM255.555 464.453c-37.753 0-74.861-10.22-107.293-29.479l-7.72-4.602-79.741 20.889 21.207-77.726-4.984-7.975c-21.147-33.606-32.415-72.584-32.415-112.308 0-116.371 94.372-210.743 210.741-210.743 56.011 0 109.758 22.307 149.277 61.98a210.93 210.93 0 0161.744 149.095c0 116.44-94.403 210.869-210.844 210.869h.028zm115.583-157.914c-6.363-3.202-37.474-18.472-43.243-20.593-5.769-2.121-10.01-3.202-14.315 3.203-4.305 6.404-16.373 20.593-20.063 24.855-3.69 4.263-7.401 4.815-13.679 1.612-6.278-3.202-26.786-9.883-50.899-31.472a192.748 192.748 0 01-35.411-43.867c-3.712-6.363-.404-9.777 2.82-12.873 3.224-3.096 6.363-7.381 9.48-11.092a41.58 41.58 0 006.357-10.597 11.678 11.678 0 00-.508-11.09c-1.718-3.18-14.444-34.357-19.534-47.06-5.09-12.703-10.37-10.603-14.272-10.901-3.902-.297-7.911-.19-12.089-.19a23.322 23.322 0 00-16.964 7.911c-5.707 6.298-22.1 21.673-22.1 52.849s22.671 61.249 25.852 65.532c3.182 4.284 44.663 68.227 108.288 95.649 15.099 6.489 26.891 10.392 36.053 13.403a87.504 87.504 0 0025.216 3.718c4.905 0 9.82-.416 14.65-1.237 12.174-1.782 37.453-15.291 42.776-30.073s5.303-27.57 3.711-30.093c-1.591-2.524-5.704-4.369-12.088-7.615l-.038.021z"
-                                                        ></path>
-                                                    </svg>
-                                                    WhatsApp Now
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                              </li>  
+                                  <div class="pb-1 duration-500 pl-3 flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700">
+                                      <a class="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2" href="/#contact-us">Contact Us</a>
+                                      <button class="text-white p-2">
+                                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="w-6 h-6 transition-transform duration-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                              <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </li>
                           </ul>
                       </nav>
                   </div>
@@ -661,7 +601,6 @@
                             >
                               <button
                                 aria-label="Buy now"
-                                id="why404"
                                 data-title="Talk to our Relationship Manager!" data-content="This is the first modal content."
                                 class="w-full h-full font-supera600 rounded-full cursor-pointer bg-white text-[15px] duration-200 uppercase openModalBtn"
                               >
@@ -687,8 +626,8 @@
         <section id="about-us">
           <div class="bg-black">
             <div
-              class="bg-cover bg-no-repeat w-full h-full myBG"
-              
+              class="bg-cover bg-no-repeat w-full h-full"
+              style="background-image: url('./public/section_two_bg.png');"
             >
               <div
                 class="w-full max-w-[100%] sm:max-w-[95%] lg:max-w-[90%] 3xl:max-w-[1400px] mx-auto pt-[40px] md:py-[60px] pb-[35px] flex flex-col md:flex-row gap-4 lg:gap-5 xl:gap-8 3xl:gap-4 justify-evenly items-center"
@@ -968,7 +907,7 @@
                   class="text-left sm:text-center lg:text-left font-supera500 text-[27px] cxs:text-[32px] sm:text-[30px] lg:text-[35px] leading-[0.9] text-[#FFFFFF] uppercase flex flex-col items-start gap-x-2 sm:block"
                 >
                   The pride of<span
-                    class="tracking-wide sm:tracking-normal font-supera700 text-[60px] sm:text-[65px] lg:text-[80px] xl:text-[85px] text-transparent bg-clip-text bg-backgroud-theme-local bg-bottom bg-cover" 
+                    class="tracking-wide sm:tracking-normal font-supera700 text-[60px] sm:text-[65px] lg:text-[80px] xl:text-[85px]"
                   >
                     Mohali</span
                   >
@@ -1076,7 +1015,7 @@
                   <button
                     aria-label="Brochure"
                     data-title="Download Brochure" data-content="This is the first modal content."
-                    class="flex items-center gap-[8.98px] openModalBtn cursor-pointer"
+                    class="flex items-center gap-[8.98px] openModalBtn"
                   >
                     <div>
                       <svg
@@ -1141,46 +1080,82 @@
                 Your Dream Home Awaits you to Own Exquisite Site in The Pinnacle
               </p>
             </div>
-            <!-- key higlight for mobile -->
-            <div id="keySliderMobile" class="block md:hidden w-full h-[450px] xs:h-[500px] relative" style="opacity: 1; transform: none;">
+            <div
+              class="block md:hidden w-full h-[450px] xs:h-[500px] relative"
+              style="opacity: 1; transform: none"
+            >
               <img
-                  alt="Prime Location"
-                  loading="lazy"
-                  decoding="async"
-                  data-nimg="fill"
-                  class="object-cover"
-                  style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; color: transparent;"
-                  sizes="100vw"
-                  src="./public/keyHighlight_mobli.png"
+                alt="Prime Location"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="object-cover"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  left: 0;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  color: transparent;
+                "
+                sizes="100vw"
+                src="./public/keyHighlight_mobli.png"
               />
-              <div class="absolute bottom-5 left-[50%] translate-x-[-50%] w-[95%] bg-white">
-                  <div class="relative w-full h-full pt-3 pb-5 pl-5 bxxs:pl-6 xs:pl-9 pr-4 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[5px] after:bg-backgroud-theme-local after:bg-cover after:bg-no-repeat after:bg-right">
-                      <h3 class="font-supera600 text-xl text-[#303030] leading-tight">
-                          Prime Location
-                      </h3>
-                      <p class="font-supera600 tracking-wider text-xs capitalize text-[#303030] mt-2">
-                          Situated on the sector-dividing road of Sector 67, The Pinnacle provides easy access to Chandigarh International Airport, IT City, and prominent educational institutions.
-                      </p>
-                  </div>
+              <div
+                class="absolute bottom-5 left-[50%] translate-x-[-50%] w-[95%] bg-white"
+              >
+                <div
+                  class="relative w-full h-full pt-3 pb-5 pl-5 bxxs:pl-6 xs:pl-9 pr-4 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[5px] after:bg-backgroud-theme-local after:bg-cover after:bg-no-repeat after:bg-right"
+                >
+                  <h3
+                    class="font-supera600 text-xl text-[#303030] leading-tight"
+                  >
+                    Prime Location
+                  </h3>
+                  <p
+                    class="font-supera600 tracking-wider text-xs capitalize text-[#303030] mt-2"
+                  >
+                    Situated on the sector-dividing road of Sector 67, The
+                    Pinnacle provides easy access to Chandigarh International
+                    Airport, IT City, and prominent educational institutions.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="flex md:hidden justify-end gap-x-3 mt-3.5">
-                <div id="prev" class="group size-[30px] flex justify-center items-center cursor-pointer border-[0.94px] border-[#D9D9D9] rounded-md bg-[#FFF] hover:bg-backgroud-theme-local bg-cover bg-left">
-                    <svg width="10" height="20" class="group-hover:fill-[#000000] fill-[#858080]" viewBox="0 0 18 31" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M17.0719 2.86381L14.58 0.374226L1.00704 13.9425C0.788251 14.1599 0.614618 14.4184 0.496132 14.7032C0.377647 14.988 0.316649 15.2934 0.316649 15.6018C0.316649 15.9102 0.377647 16.2156 0.496132 16.5004C0.614618 16.7852 0.788251 17.0437 1.00704 17.2611L14.58 30.8364L17.0696 28.3468L4.3304 15.6053L17.0719 2.86381Z"
-                        ></path>
-                    </svg>
-                </div>
-                <div id="next" class="group size-[30px] flex justify-center items-center cursor-pointer border-[0.94px] border-[#D9D9D9] rounded-md bg-[#FFF] hover:bg-backgroud-theme-local bg-cover bg-left">
-                    <svg width="10" height="20" class="group-hover:fill-[#000000] fill-[#858080]" viewBox="0 0 17 31" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0.119248 2.86381L2.61118 0.374226L16.1841 13.9425C16.4029 14.1599 16.5765 14.4184 16.695 14.7032C16.8135 14.988 16.8745 15.2934 16.8745 15.6018C16.8745 15.9102 16.8135 16.2156 16.695 16.5004C16.5765 16.7852 16.4029 17.0437 16.1841 17.2611L2.61118 30.8364L0.121594 28.3468L12.8608 15.6053L0.119248 2.86381Z"
-                        ></path>
-                    </svg>
-                </div>
-            </div>   
-            <!-- keyhighlight slider end -->
+              <div
+                class="group size-[30px] flex justify-center items-center cursor-pointer border-[0.94px] border-[#D9D9D9] rounded-md bg-[#FFF] hover:bg-backgroud-theme-local bg-cover bg-left"
+              >
+                <svg
+                  width="10"
+                  height="20"
+                  class="group-hover:fill-[#000000] fill-[#858080]"
+                  viewBox="0 0 18 31"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.0719 2.86381L14.58 0.374226L1.00704 13.9425C0.788251 14.1599 0.614618 14.4184 0.496132 14.7032C0.377647 14.988 0.316649 15.2934 0.316649 15.6018C0.316649 15.9102 0.377647 16.2156 0.496132 16.5004C0.614618 16.7852 0.788251 17.0437 1.00704 17.2611L14.58 30.8364L17.0696 28.3468L4.3304 15.6053L17.0719 2.86381Z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                class="group size-[30px] flex justify-center items-center cursor-pointer border-[0.94px] border-[#D9D9D9] rounded-md bg-[#FFF] hover:bg-backgroud-theme-local bg-cover bg-left"
+              >
+                <svg
+                  width="10"
+                  height="20"
+                  class="group-hover:fill-[#000000] fill-[#858080]"
+                  viewBox="0 0 17 31"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.119248 2.86381L2.61118 0.374226L16.1841 13.9425C16.4029 14.1599 16.5765 14.4184 16.695 14.7032C16.8135 14.988 16.8745 15.2934 16.8745 15.6018C16.8745 15.9102 16.8135 16.2156 16.695 16.5004C16.5765 16.7852 16.4029 17.0437 16.1841 17.2611L2.61118 30.8364L0.121594 28.3468L12.8608 15.6053L0.119248 2.86381Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
             <div class="hidden md:block mb-8 h-[calc(100%-85px)] md:h-auto">
               <div
                 class="relative h-full md:h-[450px] 3xl:h-[550px] overflow-hidden container mx-auto"
@@ -1212,7 +1187,7 @@
                     <div class="absolute inset-0 bg-black/50"></div>
                     <div class="absolute inset-0 text-white">
                       <div
-                        class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500 target-div"
+                        class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500"
                       >
                         <h3
                           class="text-lg xs:text-xl lg:text-3xl 3xl:text-4xl opacity-100 duration-500w-full whitespace-nowrap font-supera600 tracking-wider"
@@ -1229,7 +1204,7 @@
                           educational institutions.
                         </p>
                         <div
-                          class="hidden md:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
+                          class="hidden bxxs:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
                         >
                           <svg
                             stroke="currentColor"
@@ -1275,11 +1250,10 @@
                     <div class="absolute inset-0 bg-black/50"></div>
                     <div class="absolute inset-0 text-white">
                       <div
-                        class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500 target-div"
+                        class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500"
                       >
                         <h3
-                          class="text-lg xs:text-xl lg:text-3xl 3xl:text-4xl opacity-100 duration-500 w-full whitespace-nowrap font-supera600 tracking-wider"
-                          class="text-base cmd:text-xl md:-rotate-90 text-left md:absolute -bottom-4 3xl:-bottom-5 translate-x-[-50%] left-[50%] md:translate-y-[-240%] 3xl:translate-y-[-350%] opacity-100 duration-500 opacity-0 w-full whitespace-nowrap font-supera600 tracking-wider"
+                          class="text-lg xs:text-xl lg:text-3xl 3xl:text-4xl opacity-100 duration-500w-full whitespace-nowrap font-supera600 tracking-wider"
                         >
                           Prime Location
                         </h3>
@@ -1293,7 +1267,7 @@
                           educational institutions.
                         </p>
                         <div
-                          class="hidden md:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
+                          class="hidden bxxs:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
                         >
                           <svg
                             stroke="currentColor"
@@ -1339,7 +1313,7 @@
                     <div class="absolute inset-0 bg-black/50"></div>
                     <div class="absolute inset-0 text-white">
                       <div
-                        class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500 target-div"
+                        class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500"
                       >
                         <h3
                           class="text-lg xs:text-xl lg:text-3xl 3xl:text-4xl opacity-100 duration-500w-full whitespace-nowrap font-supera600 tracking-wider"
@@ -1356,7 +1330,7 @@
                           educational institutions.
                         </p>
                         <div
-                          class="hidden md:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
+                          class="hidden bxxs:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
                         >
                           <svg
                             stroke="currentColor"
@@ -1402,7 +1376,7 @@
                     <div class="absolute inset-0 bg-black/50"></div>
                     <div class="absolute inset-0 text-white">
                       <div
-                      class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500 target-div"
+                      class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500"
                     >
                       <h3
                         class="text-lg xs:text-xl lg:text-3xl 3xl:text-4xl opacity-100 duration-500w-full whitespace-nowrap font-supera600 tracking-wider"
@@ -1419,7 +1393,7 @@
                         educational institutions.
                       </p>
                       <div
-                        class="hidden md:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
+                        class="hidden bxxs:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
                       >
                         <svg
                           stroke="currentColor"
@@ -1465,7 +1439,7 @@
                     <div class="absolute inset-0 bg-black/50"></div>
                     <div class="absolute inset-0 text-white">
                       <div
-                      class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500 target-div"
+                      class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500"
                     >
                       <h3
                         class="text-lg xs:text-xl lg:text-3xl 3xl:text-4xl opacity-100 duration-500w-full whitespace-nowrap font-supera600 tracking-wider"
@@ -1482,7 +1456,7 @@
                         educational institutions.
                       </p>
                       <div
-                        class="hidden md:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
+                        class="hidden bxxs:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
                       >
                         <svg
                           stroke="currentColor"
@@ -1528,7 +1502,7 @@
                     <div class="absolute inset-0 bg-black/50"></div>
                     <div class="absolute inset-0 text-white">
                       <div
-                      class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500 target-div"
+                      class="w-full h-full relative flex flex-col justify-between pt-8 pb-11 px-4 duration-500"
                     >
                       <h3
                         class="text-lg xs:text-xl lg:text-3xl 3xl:text-4xl opacity-100 duration-500w-full whitespace-nowrap font-supera600 tracking-wider"
@@ -1545,7 +1519,7 @@
                         educational institutions.
                       </p>
                       <div
-                        class="hidden md:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
+                        class="hidden bxxs:block absolute right-4 md:right-7 top-4 sm:right-2 md:top-4"
                       >
                         <svg
                           stroke="currentColor"
@@ -1622,7 +1596,7 @@
                   >
                     <li
                     data-slide="1"
-                      class="tab whitespace-nowrap w-1/3 xs:px-3 sm:px-4 md:px-6 duration-300 md:bg-transparent-local bg-cover bg-right-bottom md:bg-transparent text-black md:text-[#000000] py-1.5 bxxs:py-2 md:py-0 rounded-md md:rounded-none cursor-pointer flex items-center justify-center uppercase font-supera700 sm:font-supera600 md:font-supera700 tracking-wider text-[16px] cxs:text-[15px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[22px] text-center cxs:mx-1 md:mx-0"
+                      class="tab whitespace-nowrap w-1/3 xs:px-3 sm:px-4 md:px-6 duration-300 bg-backgroud-theme-local md:bg-transparent-local bg-cover bg-right-bottom md:bg-transparent text-black md:text-[#000000] py-1.5 bxxs:py-2 md:py-0 rounded-md md:rounded-none cursor-pointer flex items-center justify-center uppercase font-supera700 sm:font-supera600 md:font-supera700 tracking-wider text-[16px] cxs:text-[15px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[22px] text-center cxs:mx-1 md:mx-0"
                     >
                       <!-- -->3BHK
                     </li>
@@ -2010,8 +1984,7 @@
                             </div>
                             <button
                               aria-label="Download Brochure"
-                              data-title="We are excited to talk to you!" data-content="This is the first modal content."
-                              class="group relative cursor-pointer group w-[40px] h-[40px] 2xl:w-[50px] 2xl:h-[50px] rounded-full bg-transparent hover:bg-white border-[1px] border-[#FFFFFF] hover:border-[#fff] flex justify-center items-center openModalBtn"
+                              class="group relative cursor-pointer group w-[40px] h-[40px] 2xl:w-[50px] 2xl:h-[50px] rounded-full bg-transparent hover:bg-white border-[1px] border-[#FFFFFF] hover:border-[#fff] flex justify-center items-center"
                             >
                               <svg
                                 class="w-[19px] 3xl:w-[23px] group-hover:fill-[#000000] fill-[#fff]"
@@ -2028,7 +2001,7 @@
                           <button
                             aria-label="Enquiry Now"
                             data-title="We are excited to talk to you!" data-content="This is the first modal content."
-                            class="2xl:self-end 2xl:mr-[15px] w-[120px] xl:w-[152px] py-[7px] 2xl:py-[8px] rounded-[7px] bg-[#fff] font-supera600 text-[12.5px] xl:text-[13px] 2xl:text-[15px] text-[#000000] flex items-center justify-center gap-2 openModalBtn cursor-pointer"
+                            class="2xl:self-end 2xl:mr-[15px] w-[120px] xl:w-[152px] py-[7px] 2xl:py-[8px] rounded-[7px] bg-[#fff] font-supera600 text-[12.5px] xl:text-[13px] 2xl:text-[15px] text-[#000000] flex items-center justify-center gap-2 openModalBtn"
                           >
                             Enquiry Now
                             <div>
@@ -2181,7 +2154,7 @@
                                 bottom: 0;
                                 color: transparent;
                               "
-                              src="./public/building_gold.svg"
+                              src="/_next/static/media/ourprodunctsmobile-build-icn.1273bf31.svg"
                             />
                           </div>
                           <div
@@ -2206,7 +2179,7 @@
                             class="w-[26px] h-[26px] sm:w-[32px] sm:h-[32px] relative"
                           >
                             <img
-                              alt="rupee-icon"
+                              alt="building-icon"
                               loading="lazy"
                               decoding="async"
                               data-nimg="fill"
@@ -2221,7 +2194,7 @@
                                 bottom: 0;
                                 color: transparent;
                               "
-                              src="./public/rupee_gold.svg"
+                              src="/_next/static/media/ourprodunctsmobile-rupees-icn.39c02db5.svg"
                             />
                           </div>
                           <div
@@ -2246,7 +2219,7 @@
                             class="w-[22px] h-[22px] sm:w-[32px] sm:h-[31px] relative"
                           >
                             <img
-                              alt="key-icon"
+                              alt="building-icon"
                               loading="lazy"
                               decoding="async"
                               data-nimg="fill"
@@ -2261,7 +2234,7 @@
                                 bottom: 0;
                                 color: transparent;
                               "
-                              src="./public/key_gold.svg"
+                              src="/_next/static/media/ourprodunctsmobile-key-icn.c89455a4.svg"
                             />
                           </div>
                           <div
@@ -2327,8 +2300,7 @@
                       </div>
                       <button
                         aria-label="download Brochure"
-                        data-title="Download Brochure"
-                        class="hover:bg-backgroud-theme-local bg-no-repeat bg-bottom bg-cover rounded-full flex flex-col justify-center items-center gap-y-0.5 openModalBtn"
+                        class="hover:bg-backgroud-theme-local bg-no-repeat bg-bottom bg-cover rounded-full flex flex-col justify-center items-center gap-y-0.5"
                       >
                         <div
                           class="p-1 border-2 border-[#0F0F0F] hover:border-[#00000000] relative cursor-pointer group size-[40px] bxxs:size-[45px] sm:size-[50px] rounded-full bg-transparent flex justify-center items-center"
@@ -2348,8 +2320,7 @@
                     </div>
                     <button
                       aria-label="Enquiry now"
-                      data-title="Enquiry now"
-                      class="bg-backgroud-theme-local bg-bottom bg-cover 2xl:self-end 2xl:mr-[15px] w-[110px] bxxs:w-[130px] xs:w-[140px] py-[8px] rounded-[7px] font-supera600 text-[12.5px] bxxs:text-[12px] xl:text-[13px] 2xl:text-[15px] text-[#000000] flex items-center justify-center tracking-[0.8px] gap-2 openModalBtn"
+                      class="bg-backgroud-theme-local bg-bottom bg-cover 2xl:self-end 2xl:mr-[15px] w-[110px] bxxs:w-[130px] xs:w-[140px] py-[8px] rounded-[7px] font-supera600 text-[12.5px] bxxs:text-[12px] xl:text-[13px] 2xl:text-[15px] text-[#000000] flex items-center justify-center tracking-[0.8px] gap-2"
                     >
                       Enquiry Now
                       <div class="hidden bxxs:block">
@@ -2396,7 +2367,7 @@
             <!-- product staus content animation -->
             <div class="w-full px-4 2xl:px-14">
                 <div>
-                    <div class="grid grid-cols-4 xs:grid-cols-4 md:grid-cols-6 2xl:grid-cols-8 gap-y-9 lg:gap-y-14">
+                    <div class="grid grid-cols-3 xs:grid-cols-4 md:grid-cols-6 2xl:grid-cols-9 gap-y-9 lg:gap-y-14">
                       <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative after:absolute after:top-[50%] after:translate-y-[-50%] after:h-[2px] after:bg-[#37493C] sm:after:left-[50%] sm:after:w-[100%]">
                         <!-- Desktop Ripple Button -->
                         <div class="hidden sm:block relative z-30 cursor-pointer size-[40px] rounded-full">
@@ -2502,7 +2473,7 @@
                         </h6>
                       </div>
                       
-                      <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative after:absolute after:top-[50%] after:translate-y-[-50%] after:h-[2px] after:bg-[#37493C] md:after:left-[50%] md:after:w-[100%]">
+                      <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative after:absolute after:top-[50%] after:translate-y-[-50%] after:h-[2px] after:bg-[#37493C] sm:after:left-[50%] sm:after:w-[100%]">
                         <!-- Desktop Ripple Button -->
                         <div class="hidden sm:block relative z-30 cursor-pointer size-[40px] rounded-full">
                           <div class="w-full h-full rounded-full"></div>
@@ -2572,7 +2543,7 @@
                         </h6>
                       </div>
                       
-                      <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative after:absolute after:top-[50%] after:translate-y-[-50%] after:h-[2px] after:bg-[#37493C] sm:after:left-[50%] sm:after:w-[100%] md:after:left-[0%] md:after:w-[0%] 2xl:after:left-[50%] 2xl:after:w-[100%]">
+                      <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative">
                         <!-- Desktop Ripple Button -->
                         <div class="hidden sm:block relative z-30 cursor-pointer size-[40px] rounded-full">
                           <div class="w-full h-full rounded-full"></div>
@@ -2642,7 +2613,7 @@
                         </h6>
                       </div>
                       
-                      <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative after:absolute after:top-[50%] after:translate-y-[-50%] after:h-[2px] after:bg-[#37493C] md:after:left-[50%] md:after:w-[100%] 2xl:after:left-[0%] 2xl:after:w-[0%]">
+                      <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative after:absolute after:top-[50%] after:translate-y-[-50%] after:h-[2px] after:bg-[#37493C] sm:after:left-[50%] sm:after:w-[100%]">
                         <!-- Desktop Ripple Button -->
                         <div class="hidden sm:block relative z-30 cursor-pointer size-[40px] rounded-full">
                           <div class="w-full h-full rounded-full"></div>
@@ -2677,7 +2648,7 @@
                         </h6>
                       </div>                
                       
-                      <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative after:absolute after:top-[50%] after:translate-y-[-50%] after:h-[2px] after:bg-[#37493C] sm:after:left-[50%] sm:after:w-[100%]">
+                      <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative">
                         <!-- Desktop Ripple Button -->
                         <div class="hidden sm:block relative z-30 cursor-pointer size-[40px] rounded-full">
                           <div class="w-full h-full rounded-full"></div>
@@ -2782,7 +2753,7 @@
                           </h6>
                         </div>
                         
-                        <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative after:absolute after:top-[50%] after:translate-y-[-50%] after:h-[2px] after:bg-[#37493C] sm:after:left-[0%] sm:after:w-[0%] 2xl:after:left-[50%] 2xl:after:w-[100%]">
+                        <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative ">
                           <!-- Desktop Ripple Button -->
                           <div class="hidden sm:block relative z-30 cursor-pointer size-[40px] rounded-full">
                             <div class="w-full h-full rounded-full"></div>
@@ -2921,7 +2892,7 @@
                           </h6>
                         </div>
                         
-                        <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative after:absolute after:top-[50%] after:translate-y-[-50%] after:h-[2px] after:bg-[#37493C] md:after:left-[50%] md:after:w-[100%] 2xl:after:left-[0%] 2xl:after:w-[0%]">
+                        <div class="w-full h-[70px] sm:h-[100px] flex flex-col justify-center items-center relative after:absolute after:top-[50%] after:translate-y-[-50%] after:h-[2px] after:bg-[#37493C] sm:after:left-[50%] sm:after:w-[100%]">
                           <!-- Desktop Ripple Button -->
                           <div class="hidden sm:block relative z-30 cursor-pointer size-[40px] rounded-full">
                             <div class="w-full h-full rounded-full"></div>
@@ -3059,8 +3030,7 @@
                   src="./public/offer_image_aurum.png"
               />
           </div>
-          <div class="cursor-pointer block sm:hidden w-full mx-auto openModalBtn" data-title="We Are Excited To Meet You"
-          aria-label="We Are Excited To Meet You">
+          <div class="cursor-pointer block sm:hidden w-full mx-auto">
               <img
                   alt="banner"
                   loading="lazy"
@@ -3071,7 +3041,7 @@
                   class="object-cover sm:object-contain object-center sm:object-center"
                   style="color: transparent; width: 100%; height: auto;"
                   sizes="100vw"
-                  src="./public/offer_mobile.png"
+                  src="./public/hero.png"
               />
           </div>
         </section>
@@ -3118,7 +3088,7 @@
                   <div
                     class="mt-10 relative w-full h-full pb-0 xl:pb-16 px-6 lg:px-0"
                   >
-                    <div class="swiper mySwiper h-[600px] md:h-full">
+                    <div class="swiper mySwiper h-full">
                       <div class="swiper-wrapper">
                         <div class="swiper-slide w-full h-full relative z-10"  data-index="0">
                           <div
@@ -3833,7 +3803,7 @@
                                 data-nimg="1"
                                 class="relative z-50 w-full h-full"
                                 style="color: transparent"
-                                src="./public/user.png"
+                                src="./public/hero.png"
                               />
                               <div
                                 class="testimonal-img-container absolute inset-0 flex justify-center items-center"
@@ -3925,7 +3895,7 @@
                   aria-label="connect with us"
                   data-title="We are excited to meet you!" data-content="This is the first modal content."
                   type="button"
-                  class="bg-white flex items-center gap-x-2 rounded-full uppercase sm:px-6 px-2 py-2 lg:text-[16px] text-[8px] xs:text-[9px] cxs:text-[10px] font-supera700 sm:text-[13px] md:text-[14px] text-black openModalBtn cursor-pointer"
+                  class="bg-white flex items-center gap-x-2 rounded-full uppercase sm:px-6 px-2 py-2 lg:text-[16px] text-[8px] xs:text-[9px] cxs:text-[10px] font-supera700 sm:text-[13px] md:text-[14px] text-black openModalBtn"
                 >
                   connect with us<svg
                     width="27"
@@ -4089,7 +4059,7 @@
      <!-- contact-us / getintouch -->
      <section id="contact-us" class="get-in-touch section-gap scroll-mt-24">
         <div
-          class="w-full h-full relative bg-GIT-local md:bg-transparent-local bg-cover bg-center-top bg-no-repeat sm:bg-[#000] flex"
+          class="w-full h-full relative bg-GIT-local md:bg-transparent-local bg-fill bg-center-top bg-no-repeat sm:bg-[#000] flex"
         >
           <div
             class="h-full w-full absolute top-0 left-0 bg-[#02152699] md:bg-black z-20"
@@ -4150,7 +4120,7 @@
                       <span class="hidden lg:inline">First Name</span></label
                     >
                     <div
-                      class="mt-1.5 w-full h-[44px] inputBgblur md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
+                      class="mt-1.5 w-full h-[44px] bg-[#121212] bg-opacity-50 backdrop-blur-sm  backdrop md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
                     >
                       <input
                         type="text"
@@ -4167,7 +4137,7 @@
                       >Last Name</label
                     >
                     <div
-                      class="mt-1.5 w-full h-[44px] md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
+                      class="mt-1.5 w-full h-[44px] bg-[#121212] md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
                     >
                       <input
                         type="text"
@@ -4184,7 +4154,7 @@
                       >Mobile</label
                     >
                     <div
-                      class="mt-1.5 w-full h-[44px] inputBgblur md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px] font-supera500 flex items-center px-5"
+                      class="mt-1.5 w-full h-[44px] bg-[#121212] md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px] font-supera500 flex items-center px-5"
                     >
                       <div
                         class="mr-2.5 font-supera500 text-[14.78px] text-white whitespace-nowrap "
@@ -4208,7 +4178,7 @@
                       >Email</label
                     >
                     <div
-                      class="mt-1.5 w-full h-[44px] inputBgblur md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
+                      class="mt-1.5 w-full h-[44px] bg-[#121212] md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
                     >
                       <input
                         type="email"
@@ -4225,7 +4195,7 @@
                       >City</label
                     >
                     <div
-                      class="mt-1.5 w-full h-[44px] inputBgblur md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
+                      class="mt-1.5 w-full h-[44px] bg-[#121212] md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
                     >
                       <input
                         type="text"
@@ -4238,7 +4208,7 @@
                   </div>
                   <div class="col-span-2">
                     <div
-                      class="mt-1 pr-2 w-full h-[44px] inputBgblur md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
+                      class="mt-1 pr-2 w-full h-[44px] bg-[#121212] md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
                     >
                       <select
                         name="preferredHomeSize"
@@ -4280,7 +4250,7 @@
                   </div>
                   <div class="col-span-2">
                     <div
-                      class="mt-1 pr-2 w-full h-[44px] inputBgblur md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
+                      class="mt-1 pr-2 w-full h-[44px] bg-[#121212] md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
                     >
                       <select
                         name="broker"
@@ -4307,7 +4277,7 @@
                   </div>
                   <div class="col-span-2">
                     <div
-                      class="mt-1 pr-2 w-full h-[44px] inputBgblur md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
+                      class="mt-1 pr-2 w-full h-[44px] bg-[#121212] md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
                     >
                       <select
                         name="howHeardAboutUs"
@@ -4337,7 +4307,7 @@
                   </div>
                   <div class="col-span-2">
                     <div
-                      class="mt-1 py-1 pr-2 w-full inputBgblur md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
+                      class="mt-1 py-1 pr-2 w-full bg-[#121212] md:bg-black border-[0.74px] border-[#F2F9FF] rounded-[6px]"
                     >
                       <textarea
                         name="message"
@@ -4426,7 +4396,7 @@
                 class="relative md:w-[200px] lg:w-[250px] flex flex-row md:flex-col justify-start md:justify-center items-center gap-x-4 md:gap-x-0"
               >
                 <div
-                  class="md:absolute bottom-[160%] lg:bottom-[135%] 2xl:bottom-[130%] min-w-[50px] min-h-[50px] sm:size-[61.33px] bg-cover bg-center rounded-fullflex justify-center items-center"
+                  class="md:absolute bottom-[160%] lg:bottom-[135%] 2xl:bottom-[130%] min-w-[50px] min-h-[50px] sm:size-[61.33px] bg-backgroud-theme-local bg-cover bg-center rounded-fullflex justify-center items-center"
                 >
                   <img
                     class="w-5 sm:w-full"
@@ -4436,8 +4406,8 @@
                 <div
                   class="font-supera500 flex flex-col bxxs:flex-row cxs:flex-col gap-x-6 tracking-wide text-[13.5px] xs:text-[18px] cxs:text-[15px] lg:text-[18px] xl:text-[20px] text-[#fff]"
                 >
-                  <button aria-label="call-1" class="cursor-pointer">+91 89680 66698</button
-                  ><button aria-label="call-2" class="cursor-pointer">+91 99880 10405</button>
+                  <button aria-label="call-1">+91 89680 66698</button
+                  ><button aria-label="call-2">+91 99880 10405</button>
                 </div>
               </div>
               <div
@@ -4452,9 +4422,9 @@
                     />
                 </div>
                 <div
-                  class="font-supera500 tracking-wide text-[13.5px] xs:text-[18px] cxs:text-[15px] lg:text-[18px] xl:text-[20px] text-[#fff] "
+                  class="font-supera500 tracking-wide text-[13.5px] xs:text-[18px] cxs:text-[15px] lg:text-[18px] xl:text-[20px] text-[#fff]"
                 >
-                  <button aria-label="info@realtynivesh.com" class="cursor-pointer">
+                  <button aria-label="info@realtynivesh.com">
                     info@realtynivesh.com
                   </button>
                 </div>
@@ -4564,7 +4534,7 @@
                 <div class="xs:pl-1 cxs:pl-2">
                   <button
                     aria-label="info@realtynivesh.com"
-                    class="font-supera400 cxs:font-supera500 no-underline tracking-wider text-[15px] bxxs:text-base xs:text-lg cxs:text-xl text-white cursor-pointer"
+                    class="font-supera400 cxs:font-supera500 no-underline tracking-wider text-[15px] bxxs:text-base xs:text-lg cxs:text-xl text-white"
                   >
                     info@realtynivesh.com
                   </button>
@@ -4611,10 +4581,11 @@
      <!-- download brochure section -->
     <section
      id="download"
-     class="section-gap scroll-mt-24 h-[450px] xs:h-[500px] cxs:h-[550px] md:h-[610px] lg:h-auto my-[60px] bg-black"
+     class="section-gap scroll-mt-24 h-[450px] xs:h-[500px] cxs:h-[550px] md:h-[610px] lg:h-auto my-[60px]"
    >
      <div
-       class=" w-full relative h-[330px] xs:h-[350px] cxs:h-[380px] cmd:h-[450px] lg:h-[570px] bg-mock-big bg-no-repeat bg-right bg-cover 3xl:bg-contain sm:bg-[length:80%_100%] md:bg-[length:80%_100%] lg:bg-[length:80%_100%] xl:bg-[length:75%_100%] 2xl:bg-[length:78%_100%]"
+     style="background-image: url('./public/mock_big.webp');"
+       class=" w-full relative h-[330px] xs:h-[350px] cxs:h-[380px] cmd:h-[450px] lg:h-[570px] bg-black lg:bg-mock-big bg-no-repeat bg-right bg-cover 3xl:bg-contain sm:bg-[length:80%_100%] md:bg-[length:80%_100%] lg:bg-[length:80%_100%] xl:bg-[length:75%_100%] 2xl:bg-[length:78%_100%]"
      >
        <div class="hidden lg:block w-full h-full bg-[#00000080] sm:bg-transparent absolute top-0 left-0 z-20 sm:z-0"></div>
        <div id="modal" class="w-full h-screen bg-[#000000bd] backdrop-blur fixed top-0 left-0 z-[999999] hidden">
@@ -4715,8 +4686,8 @@
          >
            <button
              aria-label="Brochure"
-             data-title="Download Brochure" data-content="This is the first modal content."
-             class="openModalBtn w-[245px] lg:h-[68px] group lg:hover:bg-[#D2AB60] flex flex-col lg:flex-row justify-evenly items-center gap-y-2 lg:gap-y-0 gap-x-2.5 lg:border-[1px] border-[#FFFFFF] rounded-[13px] cursor-pointer"
+             data-title="Modal 2" data-content="This is the first modal content."
+             class="openModalBtn w-[245px] lg:h-[68px] group lg:hover:bg-[#D2AB60] flex flex-col lg:flex-row justify-evenly items-center gap-y-2 lg:gap-y-0 gap-x-2.5 lg:border-[1px] border-[#FFFFFF] rounded-[13px]"
            >
              <div
                class="size-[70px] sm:size-[80px] rounded-full lg:rounded-none lg:size-auto border-[1.08px] border-[#FFFFFF] lg:border-none flex justify-center items-center lg:block"
@@ -4745,7 +4716,7 @@
            ><button
              aria-label="Site Plan"
              data-title="Download Site plan" data-content="This is the first modal content."
-             class="w-[245px] lg:h-[68px] group lg:hover:bg-[#D2AB60] flex flex-col lg:flex-row justify-evenly items-center gap-y-2 lg:gap-y-0 gap-x-2.5 lg:border-[1px] border-[#FFFFFF] rounded-[13px] openModalBtn  cursor-pointer"
+             class="w-[245px] lg:h-[68px] group lg:hover:bg-[#D2AB60] flex flex-col lg:flex-row justify-evenly items-center gap-y-2 lg:gap-y-0 gap-x-2.5 lg:border-[1px] border-[#FFFFFF] rounded-[13px] openModalBtn"
            >
              <div
                class="size-[70px] sm:size-[80px] rounded-full lg:rounded-none lg:size-auto border-[1.08px] border-[#FFFFFF] lg:border-none flex justify-center items-center lg:block"
@@ -4780,7 +4751,7 @@
            ><button
              aria-label="Price list"
              data-title="Download Price list" data-content="This is the first modal content."
-             class="w-[245px] lg:h-[68px] group lg:hover:bg-[#D2AB60] flex flex-col lg:flex-row justify-evenly items-center gap-y-2 lg:gap-y-0 gap-x-2.5 lg:border-[1px] border-[#FFFFFF] rounded-[13px] openModalBtn  cursor-pointer"
+             class="w-[245px] lg:h-[68px] group lg:hover:bg-[#D2AB60] flex flex-col lg:flex-row justify-evenly items-center gap-y-2 lg:gap-y-0 gap-x-2.5 lg:border-[1px] border-[#FFFFFF] rounded-[13px] openModalBtn"
            >
              <div
                class="size-[70px] sm:size-[80px] rounded-full lg:rounded-none lg:size-auto border-[1.08px] border-[#FFFFFF] lg:border-none flex justify-center items-center lg:block"
@@ -4830,7 +4801,217 @@
      </div>
     </section>
     <!-- need assisstance div -->
-    
+    <!-- <div>
+        <div class="w-screen h-full relative">
+          <div
+            class="fixed bottom-20 sm:bottom-5 md:bottom-10 right-2 md:right-10 z-50"
+          >
+            <div class="relative flex flex-col justify-center items-center">
+              <div
+                class="opacity-100 bg-[#ffffffcb] absolute bottom-[100%] right-0 z-50 cursor-pointer size-[25px] border-[0.0001px] border-gray-400 rounded-full flex justify-center items-center p-1"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="0"
+                  viewBox="0 0 15 15"
+                  class="text-gray-500 relative z-50 text-4xl font-thin"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h6
+                class="capitalize scrollingText opacity-100 duration-500 pb-3.5 max-w-[150px] text-[14px] text-[#474747] font-supera800 text-center"
+              >
+                Need immediate assistance?
+              </h6>
+              <div
+                class="opacity-100 duration-500 call-animation relative z-50 cursor-pointer size-[65px] rounded-full"
+                style="opacity: 0; transform: translateY(20px)"
+              >
+                <img
+                  alt="agent-img"
+                  loading="lazy"
+                  width="60"
+                  height="61"
+                  decoding="async"
+                  data-nimg="1"
+                  class="relative z-50 w-full h-full"
+                  style="color: transparent"
+                  srcset="
+                    /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fagenticon.fd54840f.png&amp;w=64&amp;q=75  1x,
+                    /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fagenticon.fd54840f.png&amp;w=128&amp;q=75 2x
+                  "
+                  src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fagenticon.fd54840f.png&amp;w=128&amp;q=75"
+                />
+                <div
+                  class="wave-container absolute inset-0 flex justify-center items-center"
+                >
+                  <div
+                    class="circle h-[60px] w-[60px] bg-black delay1"
+                  ></div>
+                  <div
+                    class="circle h-[60px] w-[60px] bg-black delay2"
+                  ></div>
+                  <div
+                    class="circle h-[60px] w-[60px] bg-black delay3"
+                  ></div>
+                  <div
+                    class="circle h-[60px] w-[60px] bg-black delay4"
+                  ></div>
+                </div>
+              </div>
+              <div class="mt-3 opacity-100 duration-500">
+                <strong
+                  class="font-supera700 text-[10px] text-center capitalize text-[#000]"
+                  >Pawan Kumar</strong
+                >
+                <p
+                  class="font-supera500 text-[8px] text-center text-[#7E7E7E] capitalize"
+                >
+                  Realty Nivesh
+                </p>
+              </div>
+              <div
+                class="w-[0px] opacity-0 whitespace-nowrap duration-300 duration-500 shadow-lg absolute bottom-[90%] -right-[0px] xs:right-8 z-50 bg-white rounded-xl overflow-hidden"
+              >
+                <div
+                  class="w-full h-full relative after:absolute after:w-[60%] after:h-[4px] after:bottom-0 after:left-[50%] after:translate-x-[-50%] after:rounded-t-2xl after:bg-[#000]"
+                >
+                  <div
+                    class="cursor-pointer text-[#131313dd] text-[25px] font-supera700 absolute top-2 right-2 z-40"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="0"
+                      viewBox="0 0 15 15"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div
+                    class="py-4 px-3 xs:px-[37px] relative flex flex-col gap-6"
+                  >
+                    <h5
+                      class="text-[16px] text-center text-[#535353] font-supera800 capitalize"
+                    >
+                      Need immediate assistance?
+                    </h5>
+                    <div class="flex">
+                      <div
+                        class="relative z-50 cursor-auto size-[65px] rounded-full"
+                      >
+                        <img
+                          alt="agent-img"
+                          loading="lazy"
+                          width="60"
+                          height="61"
+                          decoding="async"
+                          data-nimg="1"
+                          class="relative z-50 w-full h-full"
+                          style="color: transparent"
+                          srcset="
+                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fagenticon.fd54840f.png&amp;w=64&amp;q=75  1x,
+                            /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fagenticon.fd54840f.png&amp;w=128&amp;q=75 2x
+                          "
+                          src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fagenticon.fd54840f.png&amp;w=128&amp;q=75"
+                        />
+                      </div>
+                      <div class="ml-4">
+                        <strong
+                          class="font-supera800 text-[15px] text-center capitalize text-[#000]"
+                          >Pawan Kumar</strong
+                        >
+                        <p
+                          class="font-supera500 text-[10px] text-[#4c4c4c] capitalize"
+                        >
+                          Realty Nivesh
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="cursor-default w-full rounded-md overflow-hidden"
+                    >
+                      <button
+                        aria-label="contact now"
+                        class="w-full py-[7px] tracking-wider bg-[#003353] text-[13px] font-supera700 text-white uppercase"
+                      >
+                        Contact Now
+                      </button>
+                    </div>
+                    <div
+                      class="w-full flex justify-between gap-x-[10px] pt-1 pb-3"
+                    >
+                      <button
+                        aria-label="call now"
+                        class="cursor-auto flex items-center pl-[10px] w-1/2 border-[1.5px] border-[#000] rounded-lg py-1.5"
+                      >
+                        <span
+                          ><svg
+                            width="17"
+                            height="15"
+                            viewBox="0 0 9 9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.64952 0.980195H3.39685L3.95996 2.38503L3.05516 2.98688C3.00188 3.02235 2.9582 3.0704 2.92799 3.12675C2.89778 3.18311 2.88198 3.24603 2.88199 3.30994V3.31848C2.88222 3.33585 2.883 3.3532 2.88432 3.37051C2.88666 3.40235 2.89055 3.44545 2.89794 3.49865C2.91312 3.60349 2.94231 3.74793 2.99912 3.918C3.11354 4.2597 3.33769 4.70196 3.77433 5.13762C4.21097 5.57329 4.65422 5.79694 4.99629 5.9111C5.16713 5.96779 5.31151 5.99652 5.41736 6.01206C5.47711 6.02038 5.53725 6.02556 5.59754 6.02759L5.6026 6.02798H5.60572C5.67797 6.02794 5.74917 6.00783 5.81062 5.96991C5.87207 5.93198 5.92172 5.87774 5.95401 5.81325L6.21475 5.29294L7.94106 5.58028V7.25769C7.11955 7.37612 4.90056 7.493 3.15712 5.75345C1.41369 4.01391 1.53043 1.79949 1.64952 0.980195ZM3.68871 3.49865L4.39193 3.03115C4.54049 2.93228 4.65045 2.78544 4.70338 2.61527C4.75631 2.4451 4.74898 2.26195 4.68263 2.09653L4.11952 0.691695C4.06173 0.547602 3.962 0.424091 3.83319 0.337093C3.70437 0.250095 3.55239 0.203603 3.39685 0.203613H1.62928C1.27553 0.203613 0.942803 0.448625 0.884818 0.83148C0.752504 1.70203 0.573101 4.27329 2.60685 6.3025C4.6406 8.33171 7.21762 8.15232 8.09011 8.02068C8.47382 7.96244 8.71938 7.63084 8.71938 7.27788V5.58028C8.71941 5.39644 8.65407 5.21857 8.53499 5.07828C8.41592 4.938 8.25083 4.84442 8.0691 4.81418L6.34278 4.52723C6.1786 4.49989 6.00995 4.52578 5.8616 4.60112C5.71325 4.67646 5.59301 4.79727 5.51854 4.94581L5.3839 5.21489C5.33628 5.2032 5.28915 5.18959 5.24263 5.17412C5.00135 5.09414 4.66628 4.9295 4.3246 4.58858C3.98292 4.24766 3.81792 3.91334 3.73775 3.67221C3.71861 3.61522 3.70198 3.55729 3.68871 3.49865Z"
+                              fill="#000"
+                            ></path></svg
+                        ></span>
+                        <h6
+                          class="pl-1.5 text-[11.5px] text-[#5f5f5f] tracking-wide font-supera700"
+                        >
+                          Call Now
+                        </h6>
+                      </button>
+                      <div
+                        class="cursor-auto flex items-center pl-[10px] w-1/2 border-[1.5px] border-[#000] rounded-lg py-1.5"
+                      >
+                        <span
+                          ><svg
+                            width="19"
+                            height="19.3"
+                            viewBox="0 0 11 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.56823 2.42157C8.10612 1.95582 7.55568 1.58653 6.94902 1.33526C6.34237 1.08399 5.69164 0.955755 5.0348 0.958038C2.28264 0.958038 0.0395922 3.19608 0.0395922 5.94209C0.0395922 6.82222 0.271458 7.6772 0.704947 8.4316L-0.000732422 11.0167L2.64557 10.3226C3.37645 10.7199 4.19806 10.9312 5.0348 10.9312C7.78695 10.9312 10.03 8.69312 10.03 5.94712C10.03 4.61435 9.51082 3.36205 8.56823 2.42157ZM5.0348 10.0862C4.28879 10.0862 3.55791 9.88507 2.91776 9.50787L2.76654 9.41734L1.19388 9.82975L1.61225 8.30083L1.51144 8.14493C1.09698 7.48456 0.876901 6.72125 0.876327 5.94209C0.876327 3.65878 2.74134 1.79793 5.02975 1.79793C6.13868 1.79793 7.18208 2.23045 7.96337 3.01503C8.35022 3.39925 8.6568 3.85626 8.86532 4.35958C9.07385 4.86289 9.18018 5.4025 9.17814 5.94712C9.18822 8.23042 7.32321 10.0862 5.0348 10.0862ZM7.31313 6.98818C7.18712 6.92783 6.57217 6.62607 6.46128 6.58081C6.34534 6.54058 6.26469 6.52046 6.17901 6.64116C6.09332 6.76689 5.85641 7.04854 5.78584 7.129C5.71527 7.2145 5.63966 7.22456 5.51365 7.15918C5.38764 7.09883 4.98439 6.96304 4.51058 6.54058C4.13757 6.20864 3.89059 5.80127 3.81498 5.67553C3.74441 5.5498 3.8049 5.48442 3.87042 5.41904C3.92587 5.36372 3.99644 5.27319 4.05693 5.20278C4.11741 5.13237 4.14262 5.07704 4.18294 4.99658C4.22326 4.91108 4.2031 4.84067 4.17286 4.78032C4.14261 4.71996 3.89059 4.10639 3.78977 3.85492C3.68896 3.61352 3.58311 3.64369 3.5075 3.63866H3.26556C3.17987 3.63866 3.04881 3.66884 2.93288 3.79457C2.82199 3.9203 2.49939 4.22206 2.49939 4.83564C2.49939 5.44921 2.948 6.04267 3.00849 6.12314C3.06897 6.20864 3.89059 7.46597 5.14065 8.00411C5.43804 8.13487 5.66991 8.21031 5.85137 8.26563C6.14876 8.36119 6.42095 8.3461 6.6377 8.31592C6.87964 8.28072 7.37866 8.01416 7.47947 7.72246C7.58532 7.43076 7.58532 7.18433 7.55004 7.129C7.51476 7.07368 7.43915 7.04854 7.31313 6.98818Z"
+                              fill="#000"
+                            ></path></svg
+                        ></span>
+                        <h6
+                          class="pl-1.5 text-[11.5px] text-[#5f5f5f] tracking-wide font-supera700"
+                        >
+                          Whatsapp
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div> -->
     <div
     id="floatingBar"
      class="translate-y-[00%] duration-1000 transform 1s ease-in-out opacity-100 fixed bottom-1.5 w-full z-[1050] flex sm:hidden justify-center"
@@ -4880,7 +5061,7 @@
              class="relative w-1/3 pt-5 ml-1 text-center text-[11px] whitespace-nowrap xs:text-[12px] font-supera600 tracking-widest flex flex-col justify-center items-center"
            >
              <!-- radial menu -->
-             <div id="radialMenu" class="opacity-0 z-40 duration-4 transition-all backdrop-blur-sm bottom-[-14%] left-0 overlay-animation fixed overflow-hidden h-screen w-screen bg-[#000000aa] pointer-events-none">
+             <div id="radialMenu" class="opacity-0 z-40 duration-4 transition-all backdrop-blur-sm bottom-[-14%] left-0 overlay-animation fixed overflow-hidden h-screen w-screen bg-[#000000aa]">
               <div class="w-full h-full flex justify-center items-end py-9">
                   <div class="w-[200px] h-[200px] opacity-100 duration-500 relative rotate-[24deg] flex justify-between items-center rounded-full">
                       <a class="rotate-[-24deg] absolute top-[-10%] left-[-12%] w-[68px] h-[68px] bg-[#fff] rounded-full flex justify-center items-center" href="/price">
@@ -5108,7 +5289,7 @@
                 <div
                   class="flex justify-center cxs:justify-center flex-wrap cxs:flex-nowrap gap-y-6 cxs:gap-y-0 gap-x-4 sm:gap-x-10 px-2 cxs:px-0"
                 >
-                    <button aria-label="call 1" class="flex items-center gap-2.5 cursor-pointer" tel="+91 89680 66698" >
+                    <button aria-label="call 1" class="flex items-center gap-2.5">
                         <span class=""
                         ><svg
                             width="17"
@@ -5127,14 +5308,14 @@
                             ></path></svg>
                         </span>
                         <h6
-                        class="font-supera500 text-white text-[15px] md:text-[18px] lg:text-[19px] cursor-pointer"
+                        class="font-supera500 text-white text-[15px] md:text-[18px] lg:text-[19px]"
                         >
                         +91 89680 66698
                         </h6>
                     </button>
                     <button
                         aria-label="call 2"
-                        class="flex items-center gap-2.5 cursor-pointer" tel="+91 99880 10405">
+                        class="flex items-center gap-2.5">
                         <span class=""
                         ><svg
                             width="17"
@@ -5153,13 +5334,13 @@
                             ></path></svg
                         ></span>
                         <h6
-                        class="font-supera500 text-white text-[15px] md:text-[18px] lg:text-[19px]  cursor-pointer"
+                        class="font-supera500 text-white text-[15px] md:text-[18px] lg:text-[19px]"
                         >
                         +91 99880 10405
                         </h6>
                     </button>
                     <div class="flex gap-[13px]">
-                        <a href="">
+                        <div>
                         <svg
                             width="26"
                             height="27"
@@ -5174,8 +5355,8 @@
                             fill="white"
                             ></path>
                         </svg>
-                        </a>
-                        <a href="">
+                        </div>
+                        <div>
                         <svg
                             width="27"
                             height="27"
@@ -5190,8 +5371,8 @@
                             fill="white"
                             ></path>
                         </svg>
-                        </a>
-                        <a href="">
+                        </div>
+                        <div>
                         <svg
                             width="27"
                             height="27"
@@ -5206,8 +5387,8 @@
                             fill="white"
                             ></path>
                         </svg>
-                        </a>
-                        <a href="">
+                        </div>
+                        <div>
                         <svg
                             width="27"
                             height="27"
@@ -5222,8 +5403,8 @@
                             fill="white"
                             ></path>
                         </svg>
-                        </a>
-                        <a href="">
+                        </div>
+                        <div>
                         <svg
                             width="27"
                             height="27"
@@ -5238,7 +5419,7 @@
                             fill="white"
                             ></path>
                         </svg>
-                        </a>
+                        </div>
                     </div>
                     </div>
               </div>
@@ -5329,7 +5510,6 @@
 <script src="./src/js/GallerySlider.js"></script>
 <script src="./src/js/productsSlider.js"></script>
 <script src="./src/js/modalHandler.js"></script>
-<script src="./src/js/keyhighlight.js"></script>
 <script src="./src/js/counting.js"></script>
 <script src="./src/js/sidebar.js"></script>
 

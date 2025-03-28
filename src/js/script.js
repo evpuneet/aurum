@@ -1,65 +1,62 @@
-// Select the toggle button inside <li>
+// Select elements
 const megaMenuToggle = document.getElementById('meagaMenuBtn_lg');
-
-// Select all dropdowns inside nav (the hidden divs inside li)
 const dropdowns = document.querySelectorAll("nav ul li div > div.hidden");
-
-// Select the nav container using the correct ID selector
-const navDiv = document.getElementById("navDiv"); //id-navDiv 
-
-// Correct way to select elements with exclude-from-megamenu class
+const navDiv = document.getElementById("navDiv");
 const excludedItems = document.querySelectorAll(".exclude-from-megamenu");
+const burgerImage = megaMenuToggle.querySelector('img'); // Burger icon
+const crossSvgContainer = megaMenuToggle.querySelector('div'); // Cross icon
 
-// Function to check scroll position and update header
+// State tracking
+let isMenuOpen = false;
+let isProcessing = false;
+
+// Ensure the default state: burger visible, cross hidden
+burgerImage.style.display = 'block';
+crossSvgContainer.style.display = 'none';
+
+// Updated scroll handler
 function updateHeaderBackground() {
-    if (window.scrollY > 0) { // Changed from 50 to 0
-        navDiv.style.backgroundColor = '#000';
-    } else {
-        // Only make transparent if at top of page AND mega menu is closed
-        if ([...dropdowns].every(dropdown => dropdown.classList.contains('hidden'))) {
-            navDiv.style.backgroundColor = 'transparent';
-        }
-    }
+    // Black background if either:
+    // 1. User has scrolled, OR
+    // 2. Mega menu is open
+    const shouldBeBlack = window.scrollY > 0 || isMenuOpen;
+    navDiv.style.backgroundColor = shouldBeBlack ? '#000' : 'transparent';
 }
 
-// Function to toggle dropdowns
 megaMenuToggle.addEventListener("click", function (event) {
     event.stopPropagation();
-    dropdowns.forEach((dropdown) => {
-        dropdown.classList.toggle("hidden");
-    });
+    if (isProcessing) return;
+    
+    isProcessing = true;
+    isMenuOpen = !isMenuOpen;
 
-    // Toggle visibility of excluded items
-    excludedItems.forEach((item) => {
-        item.classList.toggle("hidden");
+    // Toggle mega menu dropdowns, etc.
+    dropdowns.forEach(dropdown => {
+        dropdown.classList.toggle("hidden", !isMenuOpen);
     });
+    excludedItems.forEach(item => {
+        item.classList.toggle("hidden", isMenuOpen);
+    });
+    navDiv.style.backgroundColor = isMenuOpen || window.scrollY > 0 ? '#000' : 'transparent';
 
-    // Check menu state and scroll position
-    if (1==1) {
-        navDiv.style.backgroundColor = '#000';
+    // Toggle the icons: show cross when open, burger when closed
+    if (isMenuOpen) {
+        burgerImage.style.display = 'none';
+        crossSvgContainer.style.display = 'block';
     } else {
-        // Only make transparent if at top of page
-        if (window.scrollY === 0) {
-            navDiv.style.backgroundColor = 'transparent';
-        }
+        burgerImage.style.display = 'block';
+        crossSvgContainer.style.display = 'none';
     }
+    
+    setTimeout(() => isProcessing = false, 100); // 100ms debounce
 });
 
-// Handle scroll events
+// Scroll handler
 window.addEventListener('scroll', updateHeaderBackground);
 
-// Close dropdowns when clicking outside
-document.addEventListener("click", function (event) {
-    if (!event.target.closest("nav ul li") && !event.target.closest('meagaMenuBtn_lg')) {
-        dropdowns.forEach((dropdown) => dropdown.classList.add("hidden"));
-        
-        // Only make transparent if at top of page
-        if (window.scrollY === 0) {
-            navDiv.style.backgroundColor = 'transparent';
-        }
-    }
-});
+// REMOVED ALL CLICK-OUTSIDE HANDLERS
+// No document.click listeners
+// No automatic closures
 
-
-
-
+const why404 = document.getElementById("why404");
+why404.addEventListener("click", ()=>{console.log("clicked the 404 btn")})

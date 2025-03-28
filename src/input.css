@@ -100,38 +100,7 @@
 .font-poppins {
   font-family: var(--font-poppins);
 }
-
-/* Header transition styles */
-header {
-  transition: all 0.3s ease-in-out;
-}
-
-.header-scrolled {
-  background-color: #000;
-  padding-top: 0.75rem !important; /* py-3 */
-  padding-bottom: 0.75rem !important;
-}
-
-/* Navigation link hover effect */
-.nav-link {
-  position: relative;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #ffffff;
-  transition: width 0.3s ease-in-out;
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
+ 
 @layer components {
   .menu-open {
     @apply opacity-100 visible max-h-[500px] translate-y-0 transition-all duration-300 ease-in-out;
@@ -151,49 +120,4 @@ header {
   .bg-mock-big {
     background-image: url('../public/mock_big.webp');
   }
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.faq-answer.active {
-  max-height: 200px;
-  opacity: 1;
-}
-
-/* Updated plus/minus icon styles */
-.plus-minus-icon {
-  position: relative;
-  width: 16px;
-  height: 16px;
-}
-
-.plus-minus-icon::before,
-.plus-minus-icon::after {
-  content: '';
-  position: absolute;
-  background-color: #4B5563;
-  transition: transform 0.3s ease;
-}
-
-.plus-minus-icon::before {
-  width: 2px;
-  height: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.plus-minus-icon::after {
-  width: 16px;
-  height: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.plus-minus-icon.active::before {
-  transform: translateX(-50%) rotate(90deg);
 }

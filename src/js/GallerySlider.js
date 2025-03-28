@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // Get all slides
     const slides = document.querySelectorAll('.relative.cursor-pointer.overflow-hidden.h-full');
@@ -10,31 +9,57 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to update slide widths
     function updateSlideWidths(activeIndex) {
         slides.forEach((slide, index) => {
-            // Apply transition
             slide.style.transition = 'width 0.5s ease-in-out';
-            
+    
             if (index === activeIndex) {
                 slide.style.width = '80%'; // Active slide
             } else {
                 slide.style.width = '10%'; // Inactive slides
             }
-        });
-
-        // Update content visibility
-        slides.forEach((slide, index) => {
+    
+            // Update content visibility and styles
             const mainContent = slide.querySelector('p');
             const title = slide.querySelector('h3');
-            
-            if (mainContent) {
-                mainContent.style.opacity = index === activeIndex ? '1' : '0';
-                mainContent.style.transition = 'opacity 0.5s ease-in-out';
+            const wrapperDiv = slide.querySelector('.target-div');
+
+            if (wrapperDiv) {
+                wrapperDiv.style.transition = 'flex-direction 0.5s ease-in-out';
+                wrapperDiv.style.flexDirection = index === activeIndex ? 'column' : 'row';
             }
             
+            if (mainContent) {
+                title.style.textAlign = index === activeIndex ? 'left' : 'right';
+                mainContent.style.opacity = index === activeIndex ? '1' : '0';
+                mainContent.style.visibility = index === activeIndex ? 'visible' : 'hidden';
+                mainContent.style.transition = 'opacity 0.5s ease-in-out';
+            }
+    
             if (title) {
-                title.style.opacity = '1';
+                if (index === activeIndex) {
+                    // Reset to original active style
+                    title.style.writingMode = "horizontal-tb";
+                    title.style.transform = "rotate(0deg)";
+                    title.style.opacity = "1";
+                    title.style.fontSize = "";
+                    title.style.lineHeight = "";
+                    title.classList.remove("text-sm", "rotate-180");
+                    title.classList.add("text-lg", "xs:text-xl", "lg:text-3xl", "3xl:text-4xl", "opacity-100", "duration-500");
+                } else {
+                    // Apply vertical style for inactive slides
+                    title.style.writingMode = "vertical-lr";
+                    title.style.transform = "rotate(180deg)";
+                    title.style.opacity = "1";
+                    title.style.fontSize = "x-large";
+                    title.style.lineHeight = "2.5";
+                    title.classList.remove("text-lg", "xs:text-xl", "lg:text-3xl", "3xl:text-4xl");
+                    title.classList.add("text-sm", "opacity-100", "duration-500", "rotate-180");
+                }
             }
         });
     }
+    
+    
+    
 
     // Function to go to next slide
     function nextSlide() {

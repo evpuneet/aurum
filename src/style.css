@@ -1,0 +1,158 @@
+/* Header transition styles */
+header {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .header-scrolled {
+    background-color: #000;
+    padding-top: 0.75rem !important; /* py-3 */
+    padding-bottom: 0.75rem !important;
+  }
+  
+  /* Navigation link hover effect */
+  .nav-link {
+    position: relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+ 
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .faq-answer.active {
+    max-height: 200px;
+    opacity: 1;
+  }
+  
+  /* Updated plus/minus icon styles */
+  .plus-minus-icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .plus-minus-icon::before,
+  .plus-minus-icon::after {
+    content: '';
+    position: absolute;
+    background-color: #4B5563;
+    transition: transform 0.3s ease;
+  }
+  
+  .plus-minus-icon::before {
+    width: 2px;
+    height: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .plus-minus-icon::after {
+    width: 16px;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .plus-minus-icon.active::before {
+    transform: translateX(-50%) rotate(90deg);
+  }
+  
+  /* Ensure center div remains static */
+  .static-center {
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Optional: stagger the ripple delays */
+  .ripple:nth-child(1) {
+    animation-delay: .5s;
+  }
+  .ripple:nth-child(2) {
+    animation-delay: 1s;
+  }
+  .ripple:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+  .myBG{
+    background: url("../public/section_two_bg.png");
+    background-size: 105%;
+  }
+  .bg-mock-big{
+    background-image: url("../public/mock_big.webp");
+  }
+  .bg-backgroud-theme-local{
+    background-image: url("../public/themebgimg.webp");
+  }
+
+  @media (max-width:575px) {
+    .myBG, .bg-mock-big{
+      background: none;
+    }
+
+    
+  }
+
+  .mega-menu-highlight {
+    font-size: 1.25rem; /* Adjust this value as needed */
+    font-weight: 700;
+  }
+
+  .slide-transition {
+    transition: opacity 0.5s ease-in-out;
+  }
+  .slide-hidden {
+    opacity: 0;
+  }
+  .slide-visible {
+    opacity: 1;
+  }
+
+  .bg-GIT-local{
+    background-image: url("../public/getintouchMoblie.png");
+  }
+  .inputBgblur{
+    background-color: #00000080;
+    backdrop-filter: blur(4px);
+  }
+
+  @keyframes upDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); /* Adjust this value as needed */
+    }
+  }
+  
+  .animate-moveUpDown {
+    animation: upDown 3s infinite ease-in-out; /* 3s is the duration; adjust as needed */
+  }
+  
+  .submenu-container {
+    overflow: hidden;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    height: 0;
+    opacity: 0;
+  }
+
+  li.open > .header {
+    margin-bottom: 1.25rem; /* equivalent to mb-5 in Tailwind */
+  }
