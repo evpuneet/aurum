@@ -1,9 +1,9 @@
 // Apartment Data
 const apartments = [
     { name: "Semi Furnished", price: "3000 ", image: "url('./public/hero.png')" },
-    { name: "Fully Furnished", price: "2300", image: "url('./public/sectiontwo.png')" },
-    { name: "Semi Furnished", price: "2500", image: "url('./public/hero.png')" },
-    { name: "Fully Furnished", price: "2300", image: "url('./public/sectiontwo.png')" },
+    { name: "Fully Furnished", price: "2300", image: "url('./public/keyHighlight_mobli.png')" },
+    { name: "Semi Furnished", price: "2500", image: "url('./public/keyHighlight_mobli2.webp')" },
+    { name: "Fully Furnished", price: "2300", image: "url('./public/keyHighlight_mobli3.webp')" },
     // { name: "Semi Furnished", price: "2500", image: "url('./public/hero.png')" },
 ];
 
@@ -41,19 +41,6 @@ function updateSlide(index) {
     const activeTab = tabs[currentSlide];
     tabIndicator.style.width = `${activeTab.offsetWidth}px`;
     tabIndicator.style.left = `${activeTab.offsetLeft}px`;
-
-    // Update tabs
-    tabs.forEach((tab, i) => {
-        if (i === currentSlide) {
-            // Active tab - black text on desktop, white on mobile (default)
-            tab.classList.remove('md:text-[#787878]');
-            tab.classList.add('md:text-[#000000]');
-        } else {
-            // Inactive tabs - gray on desktop, white on mobile
-            tab.classList.add('md:text-[#787878]');
-            tab.classList.remove('md:text-[#000000]');
-        }
-    });
 }
 
 // Auto-play functionality
@@ -98,12 +85,14 @@ startAutoplay();
 
 
 // for moblie responseive
+
+// Function to Update Slide
 function updateSlide_mob(index) {
     currentSlide = index;
     sliderContainer_mob.style.backgroundImage = apartments[currentSlide].image;
     apartmentName_mob.textContent = apartments[currentSlide].name;
     apartmentPrice_mob.textContent = "Price: " + apartments[currentSlide].price;
-    slideNumber_mob.textContent = `${(currentSlide + 1).toString().padStart(2, "0")}/${totalSlides.toString().padStart(2, "0")}`;
+    // slideNumber_mob.textContent = `${(currentSlide + 1).toString().padStart(2, "0")}/${totalSlides.toString().padStart(2, "0")}`;
 
     // Update tab indicator position
     const activeTab = tabs[currentSlide];
