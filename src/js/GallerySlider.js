@@ -112,10 +112,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Pause autoplay on hover
-    const sliderContainer = document.querySelector('.flex.flex-col.md\\:flex-row.w-full.h-full.relative');
-    if (sliderContainer) {
-        sliderContainer.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
-        sliderContainer.addEventListener('mouseleave', startAutoplay);
+    const sliderContainerGallery = document.querySelector('.flex.flex-col.md\\:flex-row.w-full.h-full.relative');
+    if (sliderContainerGallery) {
+        sliderContainerGallery.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+        sliderContainerGallery.addEventListener('mouseleave', startAutoplay);
     }
 });
 

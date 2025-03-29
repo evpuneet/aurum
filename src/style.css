@@ -177,3 +177,23 @@ header {
   #radialMenu a {
     will-change: transform, opacity;
   }
+
+  #slider {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .slider-content {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  #slider.fade-out {
+    opacity: 0;
+  }
+
+  .controls {
+    margin-top: 10px;
+  }
+  .controls button {
+    padding: 5px 10px;
+    margin: 0 5px;
+  }

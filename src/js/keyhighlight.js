@@ -1,59 +1,59 @@
-// Slide data (add your content and image paths here)
 const slides = [
-    {
-      image: './public/keyHighlight_mobli.png',
-      title: 'Prime Location',
-      text: 'Situated on the sector-dividing road of Sector 67...'
-    },
-    {
-      image: './public/hero.png',
-      title: 'Another Feature',
-      text: 'Description for second slide...'
-    },
-    // Add more slides as needed
-  ];
+  {
+    image: "./public/keyHighlight_mobli.png",
+    title: " Prime location",
+    text: "Situated on the sector-dividing road of Sector 67, The Pinnacle provides easy access to Chandigarh International Airport, IT City, and prominent educational institutions."
+  },
+  {
+    image: "./public/keyHighlight_mobli.png", 
+    title: "Spacious Residences",
+    text: "The project features meticulously designed 3+1 and 4+1 BHK apartments, ranging from 2,950 to 3,900 sq. ft., ensuring ample living space."
+  },
+  {
+    image: "./public/keyHighlight_mobli.png",
+    title: "Extensive Amenities",
+    text: "Residents can enjoy a clubhouse, gymnasium, swimming pool, spa, indoor games, and dedicated areas for tennis, basketball, and volleyball."
+  }
+];
 
-  // DOM elements
-  const slideContainer = document.getElementById('keySliderMobile');
-  const imageElement = slideContainer.querySelector('img');
-  const titleElement = slideContainer.querySelector('h3');
-  const textElement = slideContainer.querySelector('p');
-  const prevButton = document.getElementById('prev');
-  const nextButton = document.getElementById('next');
+let KeyMob = 0;
 
-  let currentSlide = 0;
+  // DOM Elements
+  const slider = document.getElementById('slider');
+  const sliderImg = document.getElementById('slider-img');
+  const sliderTitle = document.getElementById('slider-title');
+  const sliderText = document.getElementById('slider-text');
+  const nextBtn = document.getElementById('next');
+  const prevBtn = document.getElementById('prev');
 
-  // Add transition class to container
-  slideContainer.classList.add('slide-transition');
+  // Function to update slider content with a fade effect
+  function updateSlider(index) {
+    // Add fade-out class for transition
+    slider.classList.add('fade-out');
 
-  function updateSlide() {
-    // Fade out
-    slideContainer.classList.remove('slide-visible');
-    slideContainer.classList.add('slide-hidden');
-
-    // Wait for transition to complete
+    // Wait for fade-out to complete before updating content
     setTimeout(() => {
-      // Update content
-      imageElement.src = slides[currentSlide].image;
-      titleElement.textContent = slides[currentSlide].title;
-      textElement.textContent = slides[currentSlide].text;
+      sliderImg.src = slides[index].image;
+      sliderTitle.textContent = slides[index].title;
+      sliderText.textContent = slides[index].text;
 
-      // Fade in
-      slideContainer.classList.remove('slide-hidden');
-      slideContainer.classList.add('slide-visible');
-    }, 500); // Match transition duration
+      // Remove fade-out to show fade-in effect
+      slider.classList.remove('fade-out');
+    }, 500); // match the CSS transition duration
   }
 
-  // Navigation handlers
-  prevButton.addEventListener('click', () => {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    updateSlide();
+  // Event Listeners for buttons
+  nextBtn.addEventListener('click', () => {
+    KeyMob = (KeyMob + 1) % slides.length;
+    updateSlider(KeyMob);
   });
 
-  nextButton.addEventListener('click', () => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    updateSlide();
+  prevBtn.addEventListener('click', () => {
+    KeyMob = (KeyMob - 1 + slides.length) % slides.length;
+    updateSlider(KeyMob);
   });
 
-  // Initialize first slide
-  updateSlide();
+  // Initialize slider with first slide
+  document.addEventListener('DOMContentLoaded', () => {
+    updateSlider(KeyMob);
+  });

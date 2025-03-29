@@ -1142,9 +1142,10 @@
               </p>
             </div>
             <!-- key higlight for mobile -->
-            <div id="keySliderMobile" class="block md:hidden w-full h-[450px] xs:h-[500px] relative" style="opacity: 1; transform: none;">
+            <div id="slider" class="block md:hidden w-full h-[450px] xs:h-[500px] relative" style="opacity: 1; transform: none;">
               <img
                   alt="Prime Location"
+                  id="slider-img"
                   loading="lazy"
                   decoding="async"
                   data-nimg="fill"
@@ -1155,16 +1156,16 @@
               />
               <div class="absolute bottom-5 left-[50%] translate-x-[-50%] w-[95%] bg-white">
                   <div class="relative w-full h-full pt-3 pb-5 pl-5 bxxs:pl-6 xs:pl-9 pr-4 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[5px] after:bg-backgroud-theme-local after:bg-cover after:bg-no-repeat after:bg-right">
-                      <h3 class="font-supera600 text-xl text-[#303030] leading-tight">
+                      <h3 id="slider-title" class="font-supera600 text-xl text-[#303030] leading-tight">
                           Prime Location
                       </h3>
-                      <p class="font-supera600 tracking-wider text-xs capitalize text-[#303030] mt-2">
+                      <p id="slider-text" class="font-supera600 tracking-wider text-xs capitalize text-[#303030] mt-2">
                           Situated on the sector-dividing road of Sector 67, The Pinnacle provides easy access to Chandigarh International Airport, IT City, and prominent educational institutions.
                       </p>
                   </div>
               </div>
             </div>
-            <div class="flex md:hidden justify-end gap-x-3 mt-3.5">
+            <div class="flex md:hidden justify-end gap-x-3 mt-3.5 controls">
                 <div id="prev" class="group size-[30px] flex justify-center items-center cursor-pointer border-[0.94px] border-[#D9D9D9] rounded-md bg-[#FFF] hover:bg-backgroud-theme-local bg-cover bg-left">
                     <svg width="10" height="20" class="group-hover:fill-[#000000] fill-[#858080]" viewBox="0 0 18 31" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -5329,7 +5330,6 @@
 <script src="./src/js/GallerySlider.js"></script>
 <script src="./src/js/productsSlider.js"></script>
 <script src="./src/js/modalHandler.js"></script>
-<script src="./src/js/keyhighlight.js"></script>
 <script src="./src/js/counting.js"></script>
 <script src="./src/js/sidebar.js"></script>
 <script src="./src/js/needAssistant.js"></script>
@@ -5357,5 +5357,6 @@
       });
   });
 </script>
+<script src="./src/js/keyhighlight.js" defer></script>
 
 </html>
