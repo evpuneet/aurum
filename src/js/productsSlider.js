@@ -27,18 +27,20 @@ const prevButton = document.getElementById("prev-slide");
 const nextButton = document.getElementById("next-slide");
 const tabs = document.querySelectorAll(".tab");
 const tabIndicator = document.getElementById("tab-indicator");
-
-
 const totalSlides = apartments.length;
+
 // Function to Update Slide
 function updateSlide(index) {
     currentSlide = index;
-    
-    // Update slider content
     sliderContainer.style.backgroundImage = apartments[currentSlide].image;
     apartmentName.textContent = apartments[currentSlide].name;
     apartmentPrice.textContent = "Price: " + apartments[currentSlide].price;
     slideNumber.textContent = `${(currentSlide + 1).toString().padStart(2, "0")}/${totalSlides.toString().padStart(2, "0")}`;
+
+    // Update tab indicator position
+    const activeTab = tabs[currentSlide];
+    tabIndicator.style.width = `${activeTab.offsetWidth}px`;
+    tabIndicator.style.left = `${activeTab.offsetLeft}px`;
 
     // Update tabs
     tabs.forEach((tab, i) => {
@@ -52,25 +54,6 @@ function updateSlide(index) {
             tab.classList.remove('md:text-[#000000]');
         }
     });
-
-    // Update tab indicator position
-    const activeTab = tabs[currentSlide];
-    tabIndicator.style.width = `${activeTab.offsetWidth}px`;
-    tabIndicator.style.left = `${activeTab.offsetLeft}px`;
-}
-
-// for moblie responseive
-function updateSlide_mob(index) {
-    currentSlide = index;
-    sliderContainer_mob.style.backgroundImage = apartments[currentSlide].image;
-    apartmentName_mob.textContent = apartments[currentSlide].name;
-    apartmentPrice_mob.textContent = "Price: " + apartments[currentSlide].price;
-    // slideNumber_mob.textContent = `${(currentSlide + 1).toString().padStart(2, "0")}/${totalSlides.toString().padStart(2, "0")}`;
-
-    // Update tab indicator position
-    const activeTab = tabs[currentSlide];
-    tabIndicator.style.width = `${activeTab.offsetWidth}px`;
-    tabIndicator.style.left = `${activeTab.offsetLeft}px`;
 }
 
 // Auto-play functionality
@@ -114,5 +97,58 @@ addEventListeners();
 startAutoplay();
 
 
+// for moblie responseive
+function updateSlide_mob(index) {
+    currentSlide = index;
+    sliderContainer_mob.style.backgroundImage = apartments[currentSlide].image;
+    apartmentName_mob.textContent = apartments[currentSlide].name;
+    apartmentPrice_mob.textContent = "Price: " + apartments[currentSlide].price;
+    slideNumber_mob.textContent = `${(currentSlide + 1).toString().padStart(2, "0")}/${totalSlides.toString().padStart(2, "0")}`;
+
+    // Update tab indicator position
+    const activeTab = tabs[currentSlide];
+    tabIndicator.style.width = `${activeTab.offsetWidth}px`;
+    tabIndicator.style.left = `${activeTab.offsetLeft}px`;
+}
+
+// Auto-play functionality
+function startAutoplay_mob() {
+    autoplayTimeout = setTimeout(() => {
+        nextButton_mob.click();
+        startAutoplay_mob();
+    }, 5000); // Change slide every 3 seconds
+}
+
+// Event Listeners with auto-play reset
+function addEventListeners_mob() {
+    nextButton_mob.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlide_mob(currentSlide);
+        resetAutoplay();
+        // console.log("clicked");
+    });
+
+    prevButton_mob.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlide_mob(currentSlide);
+        resetAutoplay();
+    });
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+            updateSlide_mob(index);
+            resetAutoplay();
+        });
+    });
+}
+
+function resetAutoplay() {
+    clearTimeout(autoplayTimeout);
+    startAutoplay_mob();
+}
 
 
+// Initialize slider
+updateSlide_mob(0);
+addEventListeners_mob();
+startAutoplay_mob();
