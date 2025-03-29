@@ -98,17 +98,25 @@ header {
   .bg-mock-big{
     background-image: url("../public/mock_big.webp");
   }
-  .bg-backgroud-theme-local{
+  .bg-backgroud-theme-local, .bg-transparent-local{
     background-image: url("../public/themebgimg.webp");
   }
 
-  @media (max-width:575px) {
+  @media (max-width:1024px) {
     .myBG, .bg-mock-big{
       background: none;
     }
-
-    
   }
+
+  @media (max-width:575px) {
+    .bg-mock-big{
+      background: none;
+    }
+  }
+
+  .tab {
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
 
   .mega-menu-highlight {
     /* font-size: 18px; */
@@ -179,11 +187,11 @@ header {
   }
 
   #slider {
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 1s ease-in-out;
   }
 
   .slider-content {
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity .5s ease-in-out;
     opacity: 1;
   }
   #slider.fade-out {

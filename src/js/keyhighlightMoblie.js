@@ -5,12 +5,12 @@ const slides = [
     text: "Situated on the sector-dividing road of Sector 67, The Pinnacle provides easy access to Chandigarh International Airport, IT City, and prominent educational institutions."
   },
   {
-    image: "./public/keyHighlight_mobli.png", 
+    image: "./public/keyHighlight_mobli2.webp", 
     title: "Spacious Residences",
     text: "The project features meticulously designed 3+1 and 4+1 BHK apartments, ranging from 2,950 to 3,900 sq. ft., ensuring ample living space."
   },
   {
-    image: "./public/keyHighlight_mobli.png",
+    image: "./public/keyHighlight_mobli3.webp",
     title: "Extensive Amenities",
     text: "Residents can enjoy a clubhouse, gymnasium, swimming pool, spa, indoor games, and dedicated areas for tennis, basketball, and volleyball."
   }

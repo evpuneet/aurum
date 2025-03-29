@@ -27,15 +27,32 @@ const prevButton = document.getElementById("prev-slide");
 const nextButton = document.getElementById("next-slide");
 const tabs = document.querySelectorAll(".tab");
 const tabIndicator = document.getElementById("tab-indicator");
+
+
 const totalSlides = apartments.length;
 
 // Function to Update Slide
 function updateSlide(index) {
     currentSlide = index;
+    
+    // Update slider content
     sliderContainer.style.backgroundImage = apartments[currentSlide].image;
     apartmentName.textContent = apartments[currentSlide].name;
     apartmentPrice.textContent = "Price: " + apartments[currentSlide].price;
     slideNumber.textContent = `${(currentSlide + 1).toString().padStart(2, "0")}/${totalSlides.toString().padStart(2, "0")}`;
+
+    // Update tabs
+    tabs.forEach((tab, i) => {
+        if (i === currentSlide) {
+            // Active tab - black text on desktop, white on mobile (default)
+            tab.classList.remove('md:text-[#787878]');
+            tab.classList.add('md:text-[#000000]');
+        } else {
+            // Inactive tabs - gray on desktop, white on mobile
+            tab.classList.add('md:text-[#787878]');
+            tab.classList.remove('md:text-[#000000]');
+        }
+    });
 
     // Update tab indicator position
     const activeTab = tabs[currentSlide];
@@ -85,6 +102,7 @@ startAutoplay();
 
 
 // for moblie responseive
+
 
 // Function to Update Slide
 function updateSlide_mob(index) {
@@ -141,3 +159,4 @@ function resetAutoplay() {
 updateSlide_mob(0);
 addEventListeners_mob();
 startAutoplay_mob();
+
